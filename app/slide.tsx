@@ -149,15 +149,15 @@ const CodeIntegrityPlatformWithBackground = () => {
             {/* Progress steps */}
             <div className="grid grid-cols-3 gap-4 mt-6">
               <div className="flex flex-col items-center">
-                <span className="text-orchid-500 font-medium">Write</span>
+                <span className="text-orchid-500 font-medium">Usabilidad</span>
                 <div className="w-full h-px bg-gray-700 mt-2"></div>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-orchid-500 font-medium">Test</span>
+                <span className="text-orchid-500 font-medium">Accesibilidad</span>
                 <div className="w-full h-px bg-gray-700 mt-2"></div>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-orchid-500 font-medium">Review</span>
+                <span className="text-orchid-500 font-medium">Consistencia</span>
                 <div className="w-full h-px bg-gray-700 mt-2"></div>
               </div>
             </div>
@@ -166,16 +166,16 @@ const CodeIntegrityPlatformWithBackground = () => {
           {/* Right section - Features */}
           <div className="space-y-12">
             <div>
-              <h2 className="text-2xl font-bold mb-2">Context with quality guardrails</h2>
+              <h2 className="text-2xl font-bold mb-2">Que es el diseño de interfaces web?</h2>
               <p className="text-gray-400">
-                Control where AI gets context to ensure only relevant, high-quality context informs code and test generation.
+              El diseño de interfaces web es el proceso de crear y organizar los elementos visuales de una página web, como botones, menús y textos, para que los usuarios puedan navegar y usar el sitio de manera fácil y agradable.
               </p>
             </div>
             
             <div>
-              <h2 className="text-2xl font-bold mb-2">AI that dynamically learns best practices</h2>
+              <h2 className="text-2xl font-bold mb-2">Como funciona el diseño de interfaces web?</h2>
               <p className="text-gray-400">
-                Collect, generate and inject standardized best practices in every line of code to elevate code quality.
+              Los componentes de una interfaz, como la cabecera, cuerpo, pie de página, barra lateral, menú de navegación y elementos interactivos, se combinan para facilitar la navegación y mejorar la experiencia del usuario.
               </p>
             </div>
           </div>
@@ -185,21 +185,22 @@ const CodeIntegrityPlatformWithBackground = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {/* Card 1 */}
           <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Qodo Gen</h3>
-            <p className="text-gray-400 mb-4">Code and test agent</p>
+            <h3 className="text-2xl font-bold mb-4">Componentes</h3>
+            <p className="text-gray-400 mb-4">Los componentes de una interfaz normalmente son:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Controllable, context-aware coding assistance</span>
+                <span className="text-gray-400">Header</span>
               </li>
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Chat-guided, iterative test generation</span>
+                <span className="text-gray-400">Body</span>
               </li>
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Smart code completion and collaborative AI chat</span>
+                <span className="text-gray-400">Footer</span>
               </li>
+              <p className="text-gray-400 mb-4">Estos pueden variar</p>
             </ul>
             <div className="flex space-x-4">
               <div className="w-8 h-8 bg-orchid-600 rounded-full opacity-70"></div>
@@ -209,21 +210,22 @@ const CodeIntegrityPlatformWithBackground = () => {
           
           {/* Card 2 */}
           <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Qodo Cover</h3>
-            <p className="text-gray-400 mb-4">Code coverage agent</p>
+            <h3 className="text-2xl font-bold mb-4">Es muy importante tener</h3>
+            <p className="text-gray-400 mb-4">Dentro de un diseño</p>
             <ul className="space-y-4 mb-8">
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Context-aware regression test generation</span>
+                <span className="text-gray-400">Contenido de calidad</span>
               </li>
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Test validation and coverage improvement</span>
+                <span className="text-gray-400">Retroalimentacion clara</span>
               </li>
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Code analysis and coverage reports</span>
+                <span className="text-gray-400">Interactividad</span>
               </li>
+              <p className="text-gray-400 mb-4">Es importante tener estas cualidades para asegurar un producto de calidad</p>
             </ul>
             <div className="flex space-x-4">
               <div className="w-8 h-8 bg-orchid-700 rounded-full opacity-70"></div>
@@ -232,21 +234,22 @@ const CodeIntegrityPlatformWithBackground = () => {
           
           {/* Card 3 */}
           <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Qodo Merge</h3>
-            <p className="text-gray-400 mb-4">Code review agent</p>
+            <h3 className="text-2xl font-bold mb-4">En codigo</h3>
+            <p className="text-gray-400 mb-4">Es importante asegurar</p>
             <ul className="space-y-4 mb-8">
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Generate PR descriptions and review guide</span>
+                <span className="text-gray-400">Optimizacion de carga</span>
               </li>
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Surface bugs and get code suggestions</span>
+                <span className="text-gray-400">Seguridad</span>
               </li>
               <li className="flex">
                 <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Chat and implement code directly in the PR</span>
+                <span className="text-gray-400">Buena arquitectura de software </span>
               </li>
+              <p className="text-gray-400 mb-4">Estas practicas aseguran que se entregue un codigo limpio.</p>
             </ul>
             <div className="flex space-x-4">
               <div className="w-8 h-8 bg-orchid-400 rounded-full opacity-70"></div>
@@ -260,15 +263,15 @@ const CodeIntegrityPlatformWithBackground = () => {
         {/* Footer process steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Continuous codebase analysis + indexing</div>
+            <div className="text-sm text-gray-400">Codigo limpio</div>
             <div className="hidden md:block text-orchid-500">→</div>
           </div>
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Code embedding</div>
+            <div className="text-sm text-gray-400">Codido seguro</div>
             <div className="hidden md:block text-orchid-500">→</div>
           </div>
           <div className="flex items-center">
-            <div className="text-sm text-gray-400">Highly relevant context retrieval</div>
+            <div className="text-sm text-gray-400">Codigo optimizado</div>
           </div>
         </div>
       </div>
