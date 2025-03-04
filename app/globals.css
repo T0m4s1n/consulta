@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,19 +7,105 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background and foreground */
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 9%);
+  
+  /* Orchid color palette in HSL */
+  --orchid-50: hsl(300, 100%, 97%);    /* #FFF4FF */
+  --orchid-100: hsl(300, 100%, 93%);   /* #FEE9FE */
+  --orchid-200: hsl(300, 82%, 87%);    /* #FCD2FB */
+  --orchid-300: hsl(300, 81%, 76%);    /* #F9AEF4 */
+  --orchid-400: hsl(300, 80%, 66%);    /* #F47EEA */
+  --orchid-500: hsl(300, 79%, 56%);    /* #E953DC */
+  --orchid-600: hsl(300, 65%, 49%);    /* #CC2DBB */
+  --orchid-700: hsl(300, 55%, 42%);    /* #A9229B */
+  --orchid-800: hsl(300, 45%, 35%);    /* #8A1E7B */
+  --orchid-900: hsl(300, 40%, 30%);    /* #711E63 */
+  --orchid-950: hsl(300, 35%, 25%);    /* #4B0740 */
+  
+  /* Font family */
+  --font-family: 'Poppins', var(--font-geist-sans), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: hsl(0, 0%, 4%);      /* #0A0A0A */
+    --foreground: hsl(0, 0%, 93%);     /* #EDEDED */
   }
+}
+
+/* Add these styles to your global.css file */
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(3%, 2%) rotate(5deg); }
+  66% { transform: translate(-2%, -1%) rotate(-3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.triangle-float {
+  animation: float 15s infinite ease-in-out;
+}
+
+.bg-overlay-light {
+  background: radial-gradient(
+    circle at center, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.2) 80%, 
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+.bg-overlay-dark {
+  background: radial-gradient(
+    circle at center, 
+    transparent 0%, 
+    rgba(0, 0, 0, 0.2) 80%, 
+    rgba(0, 0, 0, 0.4) 100%
+  );
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
 }
+
+/* Utility classes for the orchid colors */
+.bg-orchid-50 { background-color: var(--orchid-50); }
+.bg-orchid-100 { background-color: var(--orchid-100); }
+.bg-orchid-200 { background-color: var(--orchid-200); }
+.bg-orchid-300 { background-color: var(--orchid-300); }
+.bg-orchid-400 { background-color: var(--orchid-400); }
+.bg-orchid-500 { background-color: var(--orchid-500); }
+.bg-orchid-600 { background-color: var(--orchid-600); }
+.bg-orchid-700 { background-color: var(--orchid-700); }
+.bg-orchid-800 { background-color: var(--orchid-800); }
+.bg-orchid-900 { background-color: var(--orchid-900); }
+.bg-orchid-950 { background-color: var(--orchid-950); }
+
+.text-orchid-50 { color: var(--orchid-50); }
+.text-orchid-100 { color: var(--orchid-100); }
+.text-orchid-200 { color: var(--orchid-200); }
+.text-orchid-300 { color: var(--orchid-300); }
+.text-orchid-400 { color: var(--orchid-400); }
+.text-orchid-500 { color: var(--orchid-500); }
+.text-orchid-600 { color: var(--orchid-600); }
+.text-orchid-700 { color: var(--orchid-700); }
+.text-orchid-800 { color: var(--orchid-800); }
+.text-orchid-900 { color: var(--orchid-900); }
+.text-orchid-950 { color: var(--orchid-950); }
+
+/* Border utility classes */
+.border-orchid-50 { border-color: var(--orchid-50); }
+.border-orchid-100 { border-color: var(--orchid-100); }
+.border-orchid-200 { border-color: var(--orchid-200); }
+.border-orchid-300 { border-color: var(--orchid-300); }
+.border-orchid-400 { border-color: var(--orchid-400); }
+.border-orchid-500 { border-color: var(--orchid-500); }
+.border-orchid-600 { border-color: var(--orchid-600); }
+.border-orchid-700 { border-color: var(--orchid-700); }
+.border-orchid-800 { border-color: var(--orchid-800); }
+.border-orchid-900 { border-color: var(--orchid-900); }
+.border-orchid-950 { border-color: var(--orchid-950); }
