@@ -26,7 +26,6 @@ const InteractiveTeam = () => {
     };
   }, []);
 
-  // Team data with orchid color palette
   const teamMembers = [
     {
       id: 1,
@@ -46,8 +45,8 @@ const InteractiveTeam = () => {
     },
     {
       id: 2,
-      name: "Carlos Rodríguez",
-      role: "UI Designer",
+      name: "River",
+      role: "Guapo",
       skills: ["Design Systems", "Animations", "Illustration"],
       description: "Expert in design systems and creation of visually appealing interfaces. Carlos has developed custom design systems for Fortune 500 companies and leads our animation team.",
       color: "#E9A9CF", // orchid-400
@@ -62,7 +61,7 @@ const InteractiveTeam = () => {
     },
     {
       id: 3,
-      name: "Elena Martínez",
+      name: "Tomasin",
       role: "Frontend Developer",
       skills: ["React", "CSS/Tailwind", "Accessibility"],
       description: "Developer specialized in implementing responsive and accessible interfaces. Elena ensures our applications meet WCAG standards and performs flawlessly across all devices.",
@@ -78,7 +77,7 @@ const InteractiveTeam = () => {
     },
     {
       id: 4,
-      name: "Pablo Sánchez",
+      name: "Makabeuz",
       role: "Project Manager",
       skills: ["Scrum", "Kanban", "Resource Management"],
       description: "Project coordinator with extensive experience in agile methodologies. Pablo has successfully led over 50 projects, always delivering on time and within budget constraints.",
@@ -94,7 +93,7 @@ const InteractiveTeam = () => {
     },
     {
       id: 5,
-      name: "Sofia Gómez",
+      name: "Dylan",
       role: "Data Scientist",
       skills: ["Machine Learning", "Data Visualization", "Python"],
       description: "Specialist in data analysis and AI implementation for product enhancement. Sofia leverages big data to drive product decisions and identify opportunities for innovation.",
