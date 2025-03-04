@@ -92,7 +92,7 @@ const RealTimeBrowserWindow = () => {
           {/* Top section - Main heading */}
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Malas practicas >:(
+              Malas practicas &gt;:(
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               A continuacion veremos malas practicas que nunca deberian verse
