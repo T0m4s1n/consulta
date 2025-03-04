@@ -7,30 +7,52 @@ const CodeIntegrityPlatformWithBackground = () => {
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
+        {/* Replaced triangle with star */}
         <div 
-          className="absolute w-1/3 h-1/3 bg-orchid-500 opacity-30"
+          className="absolute w-12 h-12 bg-orchid-700 opacity-30"
           style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
-            filter: 'blur(50px)',
-            top: '5%',
-            left: '10%',
-            animation: 'float1 8s ease-in-out infinite',
-            animationDelay: '0s'
-          }}
-        />
-        <div 
-          className="absolute w-1/4 h-1/4 bg-orchid-700 opacity-30"
-          style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
-            filter: 'blur(40px)',
-            top: '30%',
+            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            filter: 'blur(4px)',
+            top: '40%',
             right: '15%',
-            transform: 'rotate(180deg)',
             animation: 'float2 10s ease-in-out infinite',
             animationDelay: '2s'
           }}
         />
-
+        {/* Added more small stars */}
+        <div 
+          className="absolute w-8 h-8 bg-orchid-600 opacity-30"
+          style={{
+            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            filter: 'blur(3px)',
+            top: '25%',
+            left: '30%',
+            animation: 'float3 7s ease-in-out infinite',
+            animationDelay: '1s'
+          }}
+        />
+        <div 
+          className="absolute w-10 h-10 bg-orchid-400 opacity-30"
+          style={{
+            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            filter: 'blur(4px)',
+            bottom: '20%',
+            right: '25%',
+            animation: 'float1 9s ease-in-out infinite',
+            animationDelay: '3s'
+          }}
+        />
+        <div 
+          className="absolute w-6 h-6 bg-orchid-800 opacity-30"
+          style={{
+            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            filter: 'blur(2px)',
+            bottom: '30%',
+            left: '20%',
+            animation: 'float2 11s ease-in-out infinite',
+            animationDelay: '4s'
+          }}
+        />
       </div>
       <style jsx>{`
         @keyframes float1 {

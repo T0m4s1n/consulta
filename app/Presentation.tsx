@@ -341,86 +341,39 @@ const InteractiveTeam = () => {
 
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
+      {/* Rhombus Pattern Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
-          className="absolute w-1/3 h-1/3 bg-orchid-500 opacity-30"
+          className="absolute inset-0" 
           style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
-            filter: 'blur(50px)',
-            top: '5%',
-            left: '10%',
-            animation: 'float1 8s ease-in-out infinite',
-            animationDelay: '0s'
+            backgroundImage: `
+              linear-gradient(135deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%), 
+              linear-gradient(225deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%), 
+              linear-gradient(45deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%), 
+              linear-gradient(315deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%)
+            `,
+            backgroundPosition: '40px 0, 40px 0, 0 0, 0 0',
+            backgroundSize: '80px 80px',
+            backgroundColor: 'rgba(217, 130, 181, 0.03)',
+            backgroundBlendMode: 'multiply',
+            filter: 'blur(2px)'
           }}
         />
         <div 
-          className="absolute w-1/4 h-1/4 bg-orchid-700 opacity-30"
+          className="absolute inset-0"
           style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
-            filter: 'blur(40px)',
-            top: '30%',
-            right: '15%',
-            transform: 'rotate(180deg)',
-            animation: 'float2 10s ease-in-out infinite',
-            animationDelay: '2s'
+            backgroundImage: `
+              linear-gradient(135deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%), 
+              linear-gradient(225deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%), 
+              linear-gradient(45deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%), 
+              linear-gradient(315deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%)
+            `,
+            backgroundPosition: '30px 0, 30px 0, 0 0, 0 0',
+            backgroundSize: '60px 60px',
+            backgroundBlendMode: 'multiply',
           }}
         />
       </div>
-      <style jsx>{`
-        @keyframes float1 {
-          0% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          25% {
-            transform: translateY(-15px) rotate(2deg);
-          }
-          50% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          75% {
-            transform: translateY(15px) rotate(-2deg);
-          }
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-        }
-        
-        @keyframes float2 {
-          0% {
-            transform: translateY(0px) rotate(180deg);
-          }
-          25% {
-            transform: translateY(-15px) rotate(182deg);
-          }
-          50% {
-            transform: translateY(0px) rotate(180deg);
-          }
-          75% {
-            transform: translateY(15px) rotate(178deg);
-          }
-          100% {
-            transform: translateY(0px) rotate(180deg);
-          }
-        }
-        
-        @keyframes float3 {
-          0% {
-            transform: translateY(0px) rotate(60deg);
-          }
-          25% {
-            transform: translateY(-15px) rotate(62deg);
-          }
-          50% {
-            transform: translateY(0px) rotate(60deg);
-          }
-          75% {
-            transform: translateY(15px) rotate(58deg);
-          }
-          100% {
-            transform: translateY(0px) rotate(60deg);
-          }
-        }
-      `}</style>
       
       <div className="relative z-10 max-w-6xl mx-auto p-8">
         <div className="mb-8">
