@@ -171,19 +171,18 @@ const CleanCodePlatform = () => {
           <h2 className="text-sm font-bold text-orchid-500 tracking-widest uppercase">
             BUEN DISEÑO WEB
           </h2>
-          
-          {/* Footer process steps */}
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
             <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-400">Continuous code analysis</div>
+              <div className="text-sm text-gray-400">Codigo limpio</div>
               <div className="hidden md:block text-orchid-500">→</div>
             </div>
             <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-400">Real-time feedback</div>
+              <div className="text-sm text-gray-400">SOLID</div>
               <div className="hidden md:block text-orchid-500">→</div>
             </div>
             <div className="flex items-center">
-              <div className="text-sm text-gray-400">Developer empowerment</div>
+              <div className="text-sm text-gray-400">Comunicacion</div>
             </div>
           </div>
         </div>

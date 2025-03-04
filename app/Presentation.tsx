@@ -95,7 +95,7 @@ const InteractiveTeam = () => {
       id: 5,
       name: "Dylan",
       role: "Pecaminoso",
-      skills: ["Zaza lover", "Zippo", "Seductor"],
+      skills: ["Amante de la naturaleza", "Cucas destroyer", "Seductor"],
       description: "Nose que ponerle, se supone que le diga a dylan que me diga una descripcion pequena pero esta mute asi que realmente no puedo preguntarle.",
       color: "#B75A9C",
       accent: "#94366A", 
@@ -473,7 +473,7 @@ const InteractiveTeam = () => {
             </div>
           </div>
           
-          <div className="lg:col-span-2 relative h-96 overflow-hidden rounded-lg bg-white bg-opacity-20 backdrop-blur-sm border border-orchid-900 border-opacity-30 shadow-lg">
+          <div className="lg:col-span-2 relative h-96 overflow-hidden rounded-lg bg-transparent bg-opacity-70 backdrop-blur-sm border border-orchid-900 border-opacity-30 shadow-lg">
             <div 
               className="absolute inset-0 transition-transform duration-500 ease-in-out p-6 flex flex-col"
               style={{ transform: `translateX(${positionX}%)` }}
@@ -572,24 +572,23 @@ const InteractiveTeam = () => {
                           height="15"
                           rx="3"
                           ry="3"
-                          fill="#D982B5" // orchid-500
+                          fill="#D982B5"
                           stroke="black"
                           strokeWidth="2.5"
                         />
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold mb-3 text-orchid-600">
-                      Meet our team
+                      Conocenos
                     </h3>
-                    <p className="text-gray-400">Select a team member to see their detailed information</p>
+                    <p className="text-gray-400">Seleccciona a alguno de nosotros para ver mas informacion en detalle</p>
                   </div>
                 </div>
               )}
             </div>
           </div>
         </div>
-        
-        {/* Footer process steps - matching the original component */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
           <div className="flex items-center justify-between">
             <div className="text-sm text-gray-400">Diseño interfaces</div>

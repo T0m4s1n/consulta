@@ -8,7 +8,7 @@ const RealTimeBrowserWindow = () => {
   const pages = [
     {
       title: "GitHub",
-      url: "https://github.com",
+      url: "https://miit-game-front.vercel.app/",
       icon: "🐙"
     },
     {
@@ -29,7 +29,7 @@ const RealTimeBrowserWindow = () => {
       <div className="absolute inset-0 overflow-hidden">
         {/* Circle 1 */}
         <div 
-          className="absolute w-64 h-64 rounded-full bg-indigo-500 opacity-30"
+          className="absolute w-64 h-64 rounded-full bg-[#e953dc] opacity-30"
           style={{
             filter: 'blur(60px)',
             top: '10%',
@@ -38,26 +38,15 @@ const RealTimeBrowserWindow = () => {
             animationDelay: '0s'
           }}
         />
-        {/* Circle 3 */}
+        
+        {/* Additional circle for more visual interest */}
         <div 
-          className="absolute w-96 h-96 rounded-full bg-indigo-400 opacity-25"
+          className="absolute w-80 h-80 rounded-full bg-[#e953dc] opacity-20"
           style={{
             filter: 'blur(70px)',
-            bottom: '-10%',
-            left: '25%',
-            animation: 'float3 18s ease-in-out infinite',
-            animationDelay: '1.5s'
-          }}
-        />
-        
-        {/* Small Circle 4 */}
-        <div 
-          className="absolute w-40 h-40 rounded-full bg-purple-400 opacity-20"
-          style={{
-            filter: 'blur(30px)',
-            top: '20%',
-            right: '30%',
-            animation: 'float4 10s ease-in-out infinite',
+            bottom: '15%',
+            right: '10%',
+            animation: 'float2 15s ease-in-out infinite',
             animationDelay: '2s'
           }}
         />
@@ -94,8 +83,8 @@ const RealTimeBrowserWindow = () => {
       <div className="relative z-10 max-w-6xl mx-auto p-8">
         {/* Header with logo */}
         <div className="mb-8">
-          <div className="inline-block px-4 py-2 rounded-full border border-indigo-400 text-sm font-medium">
-            Nova Web Browser
+          <div className="inline-block px-4 py-2 rounded-full border border-[#e953dc] text-sm font-medium">
+            Dylan
           </div>
         </div>
         
@@ -103,17 +92,17 @@ const RealTimeBrowserWindow = () => {
           {/* Top section - Main heading */}
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Seamless Developer Experience
+              Malas practicas >:(
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Access developer tools and resources in one unified workspace
+              A continuacion veremos malas practicas que nunca deberian verse
             </p>
           </div>
           
           {/* Browser Window Component */}
-          <div className="bg-background bg-opacity-30 backdrop-blur-lg rounded-lg border border-indigo-900 border-opacity-50 overflow-hidden shadow-xl">
+          <div className="bg-background bg-opacity-30 backdrop-blur-lg rounded-lg border border-[#e953dc] border-opacity-50 overflow-hidden shadow-xl">
             {/* Browser Chrome */}
-            <div className="bg-background bg-opacity-80 border-b border-indigo-900 border-opacity-30 px-4 py-3 flex items-center">
+            <div className="bg-background bg-opacity-80 border-b border-[#e953dc] border-opacity-30 px-4 py-3 flex items-center">
               {/* Window Controls */}
               <div className="flex space-x-2 mr-4">
                 <div className="w-3 h-3 bg-red-500 rounded-full opacity-70"></div>
@@ -123,13 +112,13 @@ const RealTimeBrowserWindow = () => {
               
               {/* Navigation Controls */}
               <div className="flex space-x-3 mr-4">
-                <button className="text-gray-400 hover:text-indigo-400">
+                <button className="text-gray-400 hover:text-[#e953dc]">
                   ←
                 </button>
-                <button className="text-gray-400 hover:text-indigo-400">
+                <button className="text-gray-400 hover:text-[#e953dc]">
                   →
                 </button>
-                <button className="text-gray-400 hover:text-indigo-400">
+                <button className="text-gray-400 hover:text-[#e953dc]">
                   ↻
                 </button>
               </div>
@@ -144,14 +133,14 @@ const RealTimeBrowserWindow = () => {
             </div>
             
             {/* Tabs */}
-            <div className="flex border-b border-indigo-900 border-opacity-30 bg-background bg-opacity-50">
+            <div className="flex border-b border-[#e953dc] border-opacity-30 bg-background bg-opacity-50">
               {pages.map((page, index) => (
                 <button
                   key={index}
                   className={`px-6 py-3 text-sm font-medium transition-colors duration-200 relative flex items-center ${
                     activePage === index 
-                      ? 'text-indigo-400 border-b-2 border-indigo-500' 
-                      : 'text-gray-400 hover:text-indigo-300'
+                      ? 'text-[#e953dc] border-b-2 border-[#e953dc]' 
+                      : 'text-gray-400 hover:text-[#e953dc]'
                   }`}
                   onClick={() => setActivePage(index)}
                 >
@@ -161,8 +150,8 @@ const RealTimeBrowserWindow = () => {
               ))}
             </div>
             
-            {/* Simple iFrame Content without security attributes */}
-            <div className="h-96 bg-white">
+            {/* Increased height iFrame Content - h-96 to h-128 */}
+            <div className="h-128 bg-white">
               {pages.map((page, index) => (
                 <div 
                   key={index}
@@ -181,22 +170,22 @@ const RealTimeBrowserWindow = () => {
           
           {/* Feature description */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-indigo-900 border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-indigo-400">Distraction-Free Focus</h3>
+            <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-[#e953dc] border-opacity-30">
+              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Distraction-Free Focus</h3>
               <p className="text-gray-400">
                 Keep your development flow uninterrupted with seamless integration of web resources.
               </p>
             </div>
             
-            <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-indigo-900 border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-indigo-400">Performance Optimized</h3>
+            <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-[#e953dc] border-opacity-30">
+              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Performance Optimized</h3>
               <p className="text-gray-400">
                 Smoothly rendered UI elements and efficient memory usage for a responsive experience.
               </p>
             </div>
             
-            <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-indigo-900 border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-indigo-400">Developer-Centric</h3>
+            <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-[#e953dc] border-opacity-30">
+              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Developer-Centric</h3>
               <p className="text-gray-400">
                 Tailored for developers with quick access to code references and technical resources.
               </p>

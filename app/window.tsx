@@ -8,7 +8,7 @@ const RealTimeBrowserWindow = () => {
   const pages = [
     {
       title: "Sentry",
-      url: "https://sentry.io/welcome/",
+      url: "https://miit-game-front.vercel.app/",
       icon: "🐙"
     },
     {
@@ -38,21 +38,7 @@ const RealTimeBrowserWindow = () => {
             animation: 'float1 8s ease-in-out infinite',
             animationDelay: '0s'
           }}
-        />
-        
-        {/* Triangle 2 */}
-        <div 
-          className="absolute w-1/4 h-1/4 bg-orchid-700 opacity-30"
-          style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
-            filter: 'blur(40px)',
-            top: '30%',
-            right: '15%',
-            transform: 'rotate(180deg)',
-            animation: 'float2 10s ease-in-out infinite',
-            animationDelay: '2s'
-          }}
-        />        
+        />  
       </div>
       
       {/* Animation keyframes */}
@@ -87,7 +73,7 @@ const RealTimeBrowserWindow = () => {
         {/* Header with logo */}
         <div className="mb-8">
           <div className="inline-block px-4 py-2 rounded-full border border-orchid-400 text-sm font-medium">
-            Qodo Web Browser
+            Dylan
           </div>
         </div>
         
@@ -95,10 +81,10 @@ const RealTimeBrowserWindow = () => {
           {/* Top section - Main heading */}
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Integrated developer resources
+              Ejemplos de buenas practicas
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Access your favorite developer tools without leaving the Qodo environment
+              A continuacion mostraremos unas paginas que tienen buenas practicas
             </p>
           </div>
           
@@ -153,8 +139,8 @@ const RealTimeBrowserWindow = () => {
               ))}
             </div>
             
-            {/* Simple iFrame Content without security attributes */}
-            <div className="h-96 bg-white">
+            {/* taller iFrame Content - changed height from h-96 to h-128 */}
+            <div className="h-128 bg-white">
               {pages.map((page, index) => (
                 <div 
                   key={index}

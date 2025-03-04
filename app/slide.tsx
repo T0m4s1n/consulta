@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 
 const CodeIntegrityPlatformWithBackground = () => {
   return (
@@ -93,13 +94,12 @@ const CodeIntegrityPlatformWithBackground = () => {
             Maka y Javi
           </div>
         </div>
-        
-        {/* Main content grid */}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left section - Main heading and logo */}
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-12">
-              Code integrity fuels robust code generation
+              Que es el diseño de interfaces en web?
             </h1>
             
             <div className="flex justify-center mb-8">
@@ -111,7 +111,16 @@ const CodeIntegrityPlatformWithBackground = () => {
                     <text x="60" y="65" textAnchor="middle" fill="white" className="text-xl font-bold">q</text>
                   </svg>
                 </div>
-                <img src="/api/placeholder/200/200" alt="Qodo mascot" className="absolute inset-0" />
+                {/* Fixed image implementation using Next.js Image component */}
+                <div className="absolute inset-0">
+                  <Image 
+                    src="/cerdito.png" 
+                    alt="Qodo mascot" 
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    priority
+                  />
+                </div>
               </div>
             </div>
             
