@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Users, User, Sparkles, Code, Palette, Briefcase, Database } from 'lucide-react';
 
 const InteractiveTeam = () => {
-  const [selectedMember, setSelectedMember] = useState(null);
+  const [selectedMember, setSelectedMember] = useState<number | null>(null);
   const [positionX, setPositionX] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [eyeBlink, setEyeBlink] = useState(false);
@@ -109,7 +109,7 @@ const InteractiveTeam = () => {
     }
   ];
 
-  const selectMember = (id) => {
+  const selectMember = (id: number) => {
     if (animating) return;
     
     setAnimating(true);
@@ -130,8 +130,20 @@ const InteractiveTeam = () => {
 
   const currentMember = teamMembers.find(m => m.id === selectedMember) || null;
 
-  const RobotAvatar = ({ color, accent, characteristics, pulse }) => {
-    const getExpression = (type) => {
+  interface RobotAvatarProps {
+    color: string;
+    accent: string;
+    characteristics: {
+      antennas: boolean;
+      expression: string;
+      armsUp: boolean;
+      specialFeature: string;
+    };
+    pulse: boolean;
+  }
+
+  const RobotAvatar: React.FC<RobotAvatarProps> = ({ color, accent, characteristics, pulse }) => {
+    const getExpression = (type: string) => {
       switch(type) {
         case "happy":
           return <path d={mouthMove ? "M33 45 C38 53, 42 53, 47 45" : "M35 45 C38 50, 42 50, 45 45"} 
@@ -146,7 +158,7 @@ const InteractiveTeam = () => {
       }
     };
 
-    const renderSpecialFeature = (feature) => {
+    const renderSpecialFeature = (feature: string) => {
       switch(feature) {
         case "glow":
           return pulse ? <circle cx="50" cy="50" r="45" fill={color} opacity="0.3" /> : null;
