@@ -49,8 +49,8 @@ const InteractiveTeam = () => {
       role: "Guapo",
       skills: ["Backend", "Nose", "Olvidadizo"],
       description: "River es un hombre que camina lento, por ende lo tiene largo, porque recuerden, entre mas lento camina alguien, mas largo le cuelga el aparato.",
-      color: "#E9A9CF", // orchid-400
-      accent: "#B75A9C", // orchid-600
+      color: "#E9A9CF",
+      accent: "#B75A9C",
       icon: <Sparkles className="h-5 w-5" />,
       characteristics: {
         antennas: false,
@@ -62,11 +62,11 @@ const InteractiveTeam = () => {
     {
       id: 3,
       name: "Tomasin",
-      role: "Frontend Developer",
-      skills: ["React", "CSS/Tailwind", "Accessibility"],
-      description: "Developer specialized in implementing responsive and accessible interfaces. Elena ensures our applications meet WCAG standards and performs flawlessly across all devices.",
-      color: "#D982B5", // orchid-500
-      accent: "#B75A9C", // orchid-600
+      role: "Frontend",
+      skills: ["React/Vue", "CSS/Tailwind", "Toco usar Next"],
+      description: "Previamente estaba obsesionado con Vue, pero recientemente fue obligado a usar next. la vida a cambiado y ahora nada tiene sentido desde que el utiliza next.",
+      color: "#D982B5",
+      accent: "#B75A9C",
       icon: <Code className="h-5 w-5" />,
       characteristics: {
         antennas: true,
@@ -78,11 +78,11 @@ const InteractiveTeam = () => {
     {
       id: 4,
       name: "Makabeuz",
-      role: "Project Manager",
-      skills: ["Scrum", "Kanban", "Resource Management"],
-      description: "Project coordinator with extensive experience in agile methodologies. Pablo has successfully led over 50 projects, always delivering on time and within budget constraints.",
-      color: "#F4CCDF", // orchid-300
-      accent: "#E9A9CF", // orchid-400
+      role: "Burgues",
+      skills: ["Gacha Lover", "ARPG", "Gambling"],
+      description: "Maka vivia feliz en su casa, hasta que aparecio una bruja malevola, y le quito su casa, porque te tatuatis?, hubo una vez un gran rey que tenia muchas tierras un castillo y tambien un amor...",
+      color: "#F4CCDF",
+      accent: "#E9A9CF",
       icon: <Briefcase className="h-5 w-5" />,
       characteristics: {
         antennas: false,
@@ -94,11 +94,11 @@ const InteractiveTeam = () => {
     {
       id: 5,
       name: "Dylan",
-      role: "Data Scientist",
-      skills: ["Machine Learning", "Data Visualization", "Python"],
-      description: "Specialist in data analysis and AI implementation for product enhancement. Sofia leverages big data to drive product decisions and identify opportunities for innovation.",
-      color: "#B75A9C", // orchid-600
-      accent: "#94366A", // orchid-700
+      role: "Pecaminoso",
+      skills: ["Zaza lover", "Zippo", "Seductor"],
+      description: "Nose que ponerle, se supone que le diga a dylan que me diga una descripcion pequena pero esta mute asi que realmente no puedo preguntarle.",
+      color: "#B75A9C",
+      accent: "#94366A", 
       icon: <Database className="h-5 w-5" />,
       characteristics: {
         antennas: true,
@@ -128,10 +128,8 @@ const InteractiveTeam = () => {
     }
   };
 
-  // Get data of selected member
   const currentMember = teamMembers.find(m => m.id === selectedMember) || null;
 
-  // Robot Avatar Component
   interface RobotAvatarProps {
     color: string;
     accent: string;
@@ -145,7 +143,6 @@ const InteractiveTeam = () => {
   }
 
   const RobotAvatar: React.FC<RobotAvatarProps> = ({ color, accent, characteristics, pulse }) => {
-    // Dynamic facial expressions
     const getExpression = (type: "happy" | "surprised" | "thoughtful") => {
       switch(type) {
         case "happy":
@@ -159,7 +156,6 @@ const InteractiveTeam = () => {
       }
     };
 
-    // Render special features
     const renderSpecialFeature = (feature: "glow" | "ears" | "hat" | "bowtie" | "glasses") => {
       switch(feature) {
         case "glow":
@@ -199,11 +195,10 @@ const InteractiveTeam = () => {
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
       >
-        {/* Special features that go behind the robot */}
         {characteristics.specialFeature === "ears" && renderSpecialFeature("ears")}
         {characteristics.specialFeature === "hat" && renderSpecialFeature("hat")}
         
-        {/* Head */}
+        //cabeza
         <rect
           x="25"
           y="20"
@@ -216,7 +211,7 @@ const InteractiveTeam = () => {
           strokeWidth="2.5"
         />
         
-        {/* Screen/face */}
+        //cara
         <rect
           x="30"
           y="25"
@@ -228,11 +223,9 @@ const InteractiveTeam = () => {
           stroke="black"
           strokeWidth="2.5"
         />
-        
-        {/* Glasses feature overlay */}
+
         {characteristics.specialFeature === "glasses" && renderSpecialFeature("glasses")}
-        
-        {/* Eyes with blinking animation */}
+    
         {eyeBlink ? (
           <>
             <path d="M33 35 L38 35" stroke="black" strokeWidth="2.5" />
@@ -245,10 +238,8 @@ const InteractiveTeam = () => {
           </>
         )}
         
-        {/* Animated mouth based on expression */}
         {getExpression(characteristics.expression)}
         
-        {/* Antennas */}
         {characteristics.antennas && (
           <>
             <path d="M35 20 Q30 10 25 15" fill="none" stroke="black" strokeWidth="2.5" />
@@ -259,7 +250,7 @@ const InteractiveTeam = () => {
           </>
         )}
         
-        {/* Body */}
+        //cuerpo
         <rect
           x="30"
           y="60"
@@ -272,11 +263,8 @@ const InteractiveTeam = () => {
           strokeWidth="2.5"
         />
         
-        {/* Bowtie feature overlay */}
         {characteristics.specialFeature === "bowtie" && renderSpecialFeature("bowtie")}
         
-        {/* Arms */}
-        {/* Left arm */}
         <path
           d={characteristics.armsUp 
             ? "M30 65 Q15 60 20 50" 
@@ -294,7 +282,7 @@ const InteractiveTeam = () => {
           strokeWidth="2.5"
         />
         
-        {/* Right arm */}
+
         <path
           d={characteristics.armsUp 
             ? "M70 65 Q85 60 80 50" 
@@ -312,7 +300,6 @@ const InteractiveTeam = () => {
           strokeWidth="2.5"
         />
         
-        {/* Legs */}
         <path
           d="M40 75 L35 90"
           fill="none"
@@ -435,23 +422,20 @@ const InteractiveTeam = () => {
         }
       `}</style>
       
-      {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto p-8">
-        {/* Header with branding */}
         <div className="mb-8">
           <div className="inline-block px-4 py-2 rounded-full border border-orchid-400 text-sm font-medium">
-            Qodo Team Platform
+            Rivers
           </div>
         </div>
         
         <h2 className="text-4xl font-bold mb-2 text-orchid-600 flex items-center gap-2">
           <Users className="h-8 w-8" />
-          Our Team
+          NOSOTROS
         </h2>
-        <p className="text-gray-400 mb-10">Experts in interface design for web applications</p>
+        <p className="text-gray-400 mb-10">Aqui una breve descripcion de nosotros mismos.</p>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Team avatars grid */}
           <div className="lg:col-span-1">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-2">
               {teamMembers.map((member) => (
@@ -489,8 +473,7 @@ const InteractiveTeam = () => {
             </div>
           </div>
           
-          {/* Detailed information panel */}
-          <div className="lg:col-span-2 relative h-96 overflow-hidden rounded-lg bg-background bg-opacity-20 backdrop-blur-sm border border-orchid-900 border-opacity-30 shadow-lg">
+          <div className="lg:col-span-2 relative h-96 overflow-hidden rounded-lg bg-white bg-opacity-20 backdrop-blur-sm border border-orchid-900 border-opacity-30 shadow-lg">
             <div 
               className="absolute inset-0 transition-transform duration-500 ease-in-out p-6 flex flex-col"
               style={{ transform: `translateX(${positionX}%)` }}
@@ -522,7 +505,7 @@ const InteractiveTeam = () => {
                     </p>
                     <div className="mt-4">
                       <h4 className="font-bold text-foreground mb-2">
-                        Specialties:
+                        Habilidades
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {currentMember.skills.map((skill, index) => (
@@ -542,7 +525,6 @@ const InteractiveTeam = () => {
                 <div className="flex items-center justify-center h-full">
                   <div className="text-center max-w-lg mx-auto">
                     <div className="mx-auto w-32 h-32 flex items-center justify-center mb-6">
-                      {/* Welcome robot */}
                       <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <rect
                           x="25"
@@ -551,7 +533,7 @@ const InteractiveTeam = () => {
                           height="40"
                           rx="10"
                           ry="10"
-                          fill="#D982B5" // orchid-500
+                          fill="#D982B5"
                           stroke="black"
                           strokeWidth="2.5"
                         />
@@ -610,15 +592,15 @@ const InteractiveTeam = () => {
         {/* Footer process steps - matching the original component */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Team collaboration</div>
+            <div className="text-sm text-gray-400">Diseño interfaces</div>
             <div className="hidden md:block text-orchid-500">→</div>
           </div>
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Project tracking</div>
+            <div className="text-sm text-gray-400">Presentacion</div>
             <div className="hidden md:block text-orchid-500">→</div>
           </div>
           <div className="flex items-center">
-            <div className="text-sm text-gray-400">Continuous improvement</div>
+            <div className="text-sm text-gray-400">Enserio se ve esto?</div>
           </div>
         </div>
       </div>

@@ -5,9 +5,7 @@ import React from 'react';
 const CodeIntegrityPlatformWithBackground = () => {
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
-      {/* Blurred Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Triangle 1 */}
         <div 
           className="absolute w-1/3 h-1/3 bg-orchid-500 opacity-30"
           style={{
@@ -19,8 +17,6 @@ const CodeIntegrityPlatformWithBackground = () => {
             animationDelay: '0s'
           }}
         />
-        
-        {/* Triangle 2 - Keep initial rotation separate */}
         <div 
           className="absolute w-1/4 h-1/4 bg-orchid-700 opacity-30"
           style={{
@@ -35,8 +31,6 @@ const CodeIntegrityPlatformWithBackground = () => {
         />
 
       </div>
-      
-      {/* Animation keyframes - Separate keyframes for each triangle */}
       <style jsx>{`
         @keyframes float1 {
           0% {
@@ -92,13 +86,11 @@ const CodeIntegrityPlatformWithBackground = () => {
           }
         }
       `}</style>
-      
-      {/* Main Content */}
+
       <div className="relative z-10 max-w-6xl mx-auto p-8">
-        {/* Header with logo */}
         <div className="mb-8">
           <div className="inline-block px-4 py-2 rounded-full border border-orchid-400 text-sm font-medium">
-            Qodo Code Integrity Platform
+            Maka y Javi
           </div>
         </div>
         
