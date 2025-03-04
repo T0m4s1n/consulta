@@ -198,7 +198,7 @@ const InteractiveTeam = () => {
         {characteristics.specialFeature === "ears" && renderSpecialFeature("ears")}
         {characteristics.specialFeature === "hat" && renderSpecialFeature("hat")}
         
-        //cabeza
+        {/* cabeza */}
         <rect
           x="25"
           y="20"
@@ -211,7 +211,7 @@ const InteractiveTeam = () => {
           strokeWidth="2.5"
         />
         
-        //cara
+        {/* cara */}
         <rect
           x="30"
           y="25"
@@ -250,7 +250,7 @@ const InteractiveTeam = () => {
           </>
         )}
         
-        //cuerpo
+        {/* cuerpo */}
         <rect
           x="30"
           y="60"
