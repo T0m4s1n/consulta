@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Users, User, Sparkles, Code, Palette, Briefcase, Database } from 'lucide-react';
 
 const InteractiveTeam = () => {
-  const [selectedMember, setSelectedMember] = useState<number | null>(null);
+  const [selectedMember, setSelectedMember] = useState(null);
   const [positionX, setPositionX] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [eyeBlink, setEyeBlink] = useState(false);
@@ -38,9 +38,9 @@ const InteractiveTeam = () => {
       icon: <Palette className="h-5 w-5" />,
       characteristics: {
         antennas: true,
-        expression: "happy" as "happy" | "surprised" | "thoughtful",
+        expression: "happy",
         armsUp: true,
-        specialFeature: "glow" as "glow" | "ears" | "hat" | "bowtie" | "glasses"
+        specialFeature: "glow"
       }
     },
     {
@@ -54,9 +54,9 @@ const InteractiveTeam = () => {
       icon: <Sparkles className="h-5 w-5" />,
       characteristics: {
         antennas: false,
-        expression: "surprised" as "happy" | "surprised" | "thoughtful",
+        expression: "surprised",
         armsUp: false,
-        specialFeature: "ears" as "glow" | "ears" | "hat" | "bowtie" | "glasses"
+        specialFeature: "ears"
       }
     },
     {
@@ -70,9 +70,9 @@ const InteractiveTeam = () => {
       icon: <Code className="h-5 w-5" />,
       characteristics: {
         antennas: true,
-        expression: "surprised" as "happy" | "surprised" | "thoughtful",
+        expression: "surprised",
         armsUp: true,
-        specialFeature: "glasses" as "glow" | "ears" | "hat" | "bowtie" | "glasses"
+        specialFeature: "glasses"
       }
     },
     {
@@ -86,9 +86,9 @@ const InteractiveTeam = () => {
       icon: <Briefcase className="h-5 w-5" />,
       characteristics: {
         antennas: false,
-        expression: "happy" as "happy" | "surprised" | "thoughtful",
+        expression: "happy",
         armsUp: false,
-        specialFeature: "bowtie" as "glow" | "ears" | "hat" | "bowtie" | "glasses"
+        specialFeature: "bowtie"
       }
     },
     {
@@ -102,14 +102,14 @@ const InteractiveTeam = () => {
       icon: <Database className="h-5 w-5" />,
       characteristics: {
         antennas: true,
-        expression: "thoughtful" as "happy" | "surprised" | "thoughtful",
+        expression: "thoughtful",
         armsUp: true,
-        specialFeature: "hat" as "glow" | "ears" | "hat" | "bowtie" | "glasses"
+        specialFeature: "hat"
       }
     }
   ];
 
-  const selectMember = (id: number) => {
+  const selectMember = (id) => {
     if (animating) return;
     
     setAnimating(true);
@@ -130,20 +130,8 @@ const InteractiveTeam = () => {
 
   const currentMember = teamMembers.find(m => m.id === selectedMember) || null;
 
-  interface RobotAvatarProps {
-    color: string;
-    accent: string;
-    characteristics: {
-      antennas: boolean;
-      expression: "happy" | "surprised" | "thoughtful";
-      armsUp: boolean;
-      specialFeature: "glow" | "ears" | "hat" | "bowtie" | "glasses";
-    };
-    pulse: boolean;
-  }
-
-  const RobotAvatar: React.FC<RobotAvatarProps> = ({ color, accent, characteristics, pulse }) => {
-    const getExpression = (type: "happy" | "surprised" | "thoughtful") => {
+  const RobotAvatar = ({ color, accent, characteristics, pulse }) => {
+    const getExpression = (type) => {
       switch(type) {
         case "happy":
           return <path d={mouthMove ? "M33 45 C38 53, 42 53, 47 45" : "M35 45 C38 50, 42 50, 45 45"} 
@@ -153,10 +141,12 @@ const InteractiveTeam = () => {
         case "thoughtful":
           return <path d={mouthMove ? "M34 48 C39 44, 42 48, 46 48" : "M35 48 C38 46, 42 48, 45 48"} 
                       stroke="black" strokeWidth="2.5" fill="none" />;
+        default:
+          return <path d="M35 45 C38 50, 42 50, 45 45" stroke="black" strokeWidth="2.5" fill="none" />;
       }
     };
 
-    const renderSpecialFeature = (feature: "glow" | "ears" | "hat" | "bowtie" | "glasses") => {
+    const renderSpecialFeature = (feature) => {
       switch(feature) {
         case "glow":
           return pulse ? <circle cx="50" cy="50" r="45" fill={color} opacity="0.3" /> : null;
@@ -186,6 +176,8 @@ const InteractiveTeam = () => {
               <path d="M45 35 L55 35" stroke="black" strokeWidth="2" />
             </>
           );
+        default:
+          return null;
       }
     };
 
@@ -341,38 +333,67 @@ const InteractiveTeam = () => {
 
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
-      {/* Rhombus Pattern Background */}
+      {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
           className="absolute inset-0" 
           style={{
             backgroundImage: `
-              linear-gradient(135deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%), 
-              linear-gradient(225deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%), 
-              linear-gradient(45deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%), 
-              linear-gradient(315deg, rgba(183, 90, 156, 0.05) 25%, transparent 25%)
+              linear-gradient(45deg, rgba(183, 90, 156, 0.08) 25%, transparent 25%), 
+              linear-gradient(-45deg, rgba(183, 90, 156, 0.08) 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, rgba(183, 90, 156, 0.08) 75%), 
+              linear-gradient(-45deg, transparent 75%, rgba(183, 90, 156, 0.08) 75%)
             `,
-            backgroundPosition: '40px 0, 40px 0, 0 0, 0 0',
-            backgroundSize: '80px 80px',
-            backgroundColor: 'rgba(217, 130, 181, 0.03)',
-            backgroundBlendMode: 'multiply',
-            filter: 'blur(2px)'
+            backgroundSize: '40px 40px',
+            backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px',
+            filter: 'blur(0.5px)'
           }}
         />
         <div 
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(135deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%), 
-              linear-gradient(225deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%), 
-              linear-gradient(45deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%), 
-              linear-gradient(315deg, rgba(233, 169, 207, 0.07) 25%, transparent 25%)
+              linear-gradient(45deg, rgba(217, 130, 181, 0.1) 25%, transparent 25%), 
+              linear-gradient(-45deg, rgba(217, 130, 181, 0.1) 25%, transparent 25%)
             `,
-            backgroundPosition: '30px 0, 30px 0, 0 0, 0 0',
             backgroundSize: '60px 60px',
-            backgroundBlendMode: 'multiply',
+            backgroundPosition: '0 0, 0 30px',
+            opacity: '0.7',
+            filter: 'blur(1px)'
           }}
         />
+        <div 
+          className="absolute inset-0 grid"
+          style={{
+            gridTemplate: 'repeat(calc(100% / 40px), 1fr) / repeat(calc(100% / 40px), 1fr)',
+            placeItems: 'center',
+            color: 'rgba(183, 90, 156, 0.15)',
+            fontFamily: '"Space Mono", monospace',
+            fontSize: '14px',
+            fontWeight: '700',
+            maskImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 100%)',
+            animation: 'patternFloat 20s ease-in-out reverse infinite'
+          }}
+          aria-hidden="true"
+        >
+          {Array(100).fill('T').map((letter, i) => (
+            <span key={i}>{letter}</span>
+          ))}
+        </div>
+        <style jsx>{`
+          @keyframes patternFloat {
+            0% {
+              transform: translateY(0) translateX(0);
+            }
+            50% {
+              transform: translateY(5px) translateX(-5px);
+            }
+            100% {
+              transform: translateY(0) translateX(0);
+            }
+          }
+        `}</style>
       </div>
       
       <div className="relative z-10 max-w-6xl mx-auto p-8">
