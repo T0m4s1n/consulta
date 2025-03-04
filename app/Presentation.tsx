@@ -31,10 +31,10 @@ const InteractiveTeam = () => {
       id: 1,
       name: "Javier",
       role: "Diseñador",
-      skills: ["Scrum Master", "Wireframing", "Prototyping"],
-      description: "Specialist in user research and designing intuitive experiences that delight users. Ana has worked on over 20 projects improving user satisfaction scores by an average of 35%.",
-      color: "#D982B5", // orchid-500
-      accent: "#B75A9C", // orchid-600
+      skills: ["Scrum Master", "Spiderman", "Negro"],
+      description: "Hombre determinado en hacer que sus conocimientos en scrum se apliquen todo el tiempo, ama las buenas practicas y si no las aplicas te detesta, ten cuidado con el",
+      color: "#94366A",
+      accent: "#74204F",
       icon: <Palette className="h-5 w-5" />,
       characteristics: {
         antennas: true,
@@ -47,8 +47,8 @@ const InteractiveTeam = () => {
       id: 2,
       name: "River",
       role: "Guapo",
-      skills: ["Design Systems", "Animations", "Illustration"],
-      description: "Expert in design systems and creation of visually appealing interfaces. Carlos has developed custom design systems for Fortune 500 companies and leads our animation team.",
+      skills: ["Backend", "Nose", "Olvidadizo"],
+      description: "River es un hombre que camina lento, por ende lo tiene largo, porque recuerden, entre mas lento camina alguien, mas largo le cuelga el aparato.",
       color: "#E9A9CF", // orchid-400
       accent: "#B75A9C", // orchid-600
       icon: <Sparkles className="h-5 w-5" />,
@@ -65,12 +65,12 @@ const InteractiveTeam = () => {
       role: "Frontend Developer",
       skills: ["React", "CSS/Tailwind", "Accessibility"],
       description: "Developer specialized in implementing responsive and accessible interfaces. Elena ensures our applications meet WCAG standards and performs flawlessly across all devices.",
-      color: "#94366A", // orchid-700
-      accent: "#74204F", // orchid-800
+      color: "#D982B5", // orchid-500
+      accent: "#B75A9C", // orchid-600
       icon: <Code className="h-5 w-5" />,
       characteristics: {
         antennas: true,
-        expression: "thoughtful" as "happy" | "surprised" | "thoughtful",
+        expression: "surprised" as "happy" | "surprised" | "thoughtful",
         armsUp: true,
         specialFeature: "glasses" as "glow" | "ears" | "hat" | "bowtie" | "glasses"
       }
@@ -354,9 +354,7 @@ const InteractiveTeam = () => {
 
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
-      {/* Blurred Background Elements - matching the original component */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Triangle 1 */}
         <div 
           className="absolute w-1/3 h-1/3 bg-orchid-500 opacity-30"
           style={{
@@ -368,8 +366,6 @@ const InteractiveTeam = () => {
             animationDelay: '0s'
           }}
         />
-        
-        {/* Triangle 2 */}
         <div 
           className="absolute w-1/4 h-1/4 bg-orchid-700 opacity-30"
           style={{
@@ -382,12 +378,7 @@ const InteractiveTeam = () => {
             animationDelay: '2s'
           }}
         />
-        
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 pointer-events-none bg-overlay-dark" />
       </div>
-      
-      {/* Animation keyframes - Match the original */}
       <style jsx>{`
         @keyframes float1 {
           0% {

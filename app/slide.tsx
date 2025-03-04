@@ -33,23 +33,7 @@ const CodeIntegrityPlatformWithBackground = () => {
             animationDelay: '2s'
           }}
         />
-        
-        {/* Triangle 3 - Keep initial rotation separate */}
-        <div 
-          className="absolute w-1/2 h-1/2 bg-orchid-400 opacity-20"
-          style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
-            filter: 'blur(60px)',
-            bottom: '-10%',
-            left: '30%',
-            transform: 'rotate(60deg)',
-            animation: 'float3 12s ease-in-out infinite',
-            animationDelay: '1s'
-          }}
-        />
-        
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 pointer-events-none bg-overlay-dark" />
+
       </div>
       
       {/* Animation keyframes - Separate keyframes for each triangle */}

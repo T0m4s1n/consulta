@@ -61,9 +61,6 @@ const RealTimeBrowserWindow = () => {
             animationDelay: '2s'
           }}
         />
-        
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 pointer-events-none bg-overlay-dark" />
       </div>
       
       {/* Animation keyframes */}

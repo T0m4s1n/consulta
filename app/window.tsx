@@ -7,8 +7,8 @@ const RealTimeBrowserWindow = () => {
   
   const pages = [
     {
-      title: "GitHub",
-      url: "https://t0m4s1n-portfolio.vercel.app/",
+      title: "Sentry",
+      url: "https://sentry.io/welcome/",
       icon: "🐙"
     },
     {
@@ -53,8 +53,6 @@ const RealTimeBrowserWindow = () => {
             animationDelay: '2s'
           }}
         />        
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 pointer-events-none bg-overlay-dark" />
       </div>
       
       {/* Animation keyframes */}
