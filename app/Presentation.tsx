@@ -345,68 +345,8 @@ const InteractiveTeam = () => {
 
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
-      {/* Enhanced Background Pattern */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div 
-          className="absolute inset-0" 
-          style={{
-            backgroundImage: `
-              linear-gradient(45deg, rgba(183, 90, 156, 0.08) 25%, transparent 25%), 
-              linear-gradient(-45deg, rgba(183, 90, 156, 0.08) 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, rgba(183, 90, 156, 0.08) 75%), 
-              linear-gradient(-45deg, transparent 75%, rgba(183, 90, 156, 0.08) 75%)
-            `,
-            backgroundSize: '40px 40px',
-            backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px',
-            filter: 'blur(0.5px)'
-          }}
-        />
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(45deg, rgba(217, 130, 181, 0.1) 25%, transparent 25%), 
-              linear-gradient(-45deg, rgba(217, 130, 181, 0.1) 25%, transparent 25%)
-            `,
-            backgroundSize: '60px 60px',
-            backgroundPosition: '0 0, 0 30px',
-            opacity: '0.7',
-            filter: 'blur(1px)'
-          }}
-        />
-        <div 
-          className="absolute inset-0 grid"
-          style={{
-            gridTemplate: 'repeat(calc(100% / 40px), 1fr) / repeat(calc(100% / 40px), 1fr)',
-            placeItems: 'center',
-            color: 'rgba(183, 90, 156, 0.15)',
-            fontFamily: '"Space Mono", monospace',
-            fontSize: '14px',
-            fontWeight: '700',
-            maskImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 100%)',
-            animation: 'patternFloat 20s ease-in-out reverse infinite'
-          }}
-          aria-hidden="true"
-        >
-          {Array(100).fill('T').map((letter, i) => (
-            <span key={i}>{letter}</span>
-          ))}
-        </div>
-        <style jsx>{`
-          @keyframes patternFloat {
-            0% {
-              transform: translateY(0) translateX(0);
-            }
-            50% {
-              transform: translateY(5px) translateX(-5px);
-            }
-            100% {
-              transform: translateY(0) translateX(0);
-            }
-          }
-        `}</style>
-      </div>
+      {/* Background - removed gradient patterns */}
+      <div className="absolute inset-0 bg-background"></div>
       
       <div className="relative z-10 max-w-6xl mx-auto p-8">
         <div className="mb-8">
@@ -421,7 +361,7 @@ const InteractiveTeam = () => {
         </h2>
         <p className="text-gray-400 mb-10">Aqui una breve descripcion de nosotros mismos.</p>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
           <div className="lg:col-span-1">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-2">
               {teamMembers.map((member) => (
@@ -572,6 +512,11 @@ const InteractiveTeam = () => {
                 </div>
               )}
             </div>
+          </div>
+          
+          {/* Repositioned and resized bingus image */}
+          <div className="absolute bottom-1 right-40 w-1/4 lg:w-1/6 h-auto z-10">
+            <img src="/bingus.png" alt="Nuestro equipo" className="w-full h-full object-contain"/>
           </div>
         </div>
 
