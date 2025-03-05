@@ -95,7 +95,7 @@ const CleanCodePlatform = () => {
             </h3>
             
             <p className="text-gray-400 mb-8 leading-relaxed">
-            La modularidad y reutilización optimizan el código. Usa componentes reutilizables en Vue para evitar duplicaciones innecesarias. Mantén una clara separación de responsabilidades dividiendo HTML, CSS y JavaScript en archivos organizados. El código limpio y documentado facilita el mantenimiento y colaboración en equipo.
+            La modularidad y reutilización optimizan el código. Usa componentes reutilizables en un framwework para evitar duplicaciones innecesarias. Mantén una clara separación de responsabilidades dividiendo HTML, CSS y JavaScript en archivos organizados. El código limpio y documentado facilita el mantenimiento y colaboración en equipo.
             </p>
             
             <a href="#" className="inline-flex items-center text-orchid-500 font-medium hover:text-orchid-400 transition-colors group">
