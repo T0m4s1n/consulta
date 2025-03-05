@@ -7,18 +7,18 @@ const RealTimeBrowserWindow = () => {
   
   const pages = [
     {
-      title: "Sentry",
-      url: "https://miit-game-front.vercel.app/",
+      title: "csszengarden",
+      url: "https://csszengarden.com/",
       icon: "🐙"
     },
     {
-      title: "Stack Overflow",
-      url: "https://stackoverflow.com",
+      title: "Monita",
+      url: "https://monita.es/",
       icon: "📚"
     },
     {
-      title: "Dev.to",
-      url: "https://dev.to",
+      title: "Pollen design",
+      url: "https://www.pollen.design/",
       icon: "👩‍💻"
     }
   ];
@@ -205,23 +205,23 @@ const RealTimeBrowserWindow = () => {
           {/* Feature description */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-orchid-400">Integrated Browsing</h3>
+              <h3 className="text-xl font-bold mb-3 text-orchid-400">Csszengarden</h3>
               <p className="text-gray-400">
-                Access documentation, code repositories, and developer resources without context switching.
+              paleta de colores consistentes no sobre saturacion espacio para cada cosa intuitiva no maneja links dispersos todo mantiene un orden y es perfectamente legible
               </p>
             </div>
             
             <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-orchid-400">Enhanced Security</h3>
+              <h3 className="text-xl font-bold mb-3 text-orchid-400">Monita</h3>
               <p className="text-gray-400">
-                Safely browse with our sandboxed environment that prevents malicious code execution.
+              paleta de colores consistentes no sobre saturacion intuitiva mantiene un orden legible
               </p>
             </div>
             
             <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-orchid-400">Synced Workflow</h3>
+              <h3 className="text-xl font-bold mb-3 text-orchid-400">Pollen Design</h3>
               <p className="text-gray-400">
-                Bookmark resources and seamlessly integrate web content with your development process.
+              manejo de bastante informacion sin saturacion buen manejo del espacio diseño consistente en colores
               </p>
             </div>
           </div>

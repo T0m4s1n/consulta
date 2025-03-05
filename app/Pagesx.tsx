@@ -171,23 +171,23 @@ const RealTimeBrowserWindow = () => {
           {/* Feature description */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-[#e953dc] border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Distraction-Free Focus</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Museom 007</h3>
               <p className="text-gray-400">
-                Keep your development flow uninterrupted with seamless integration of web resources.
+              sobrecargado de imágenes texto es difícil de leer debido a la falta de coherencia en las fuentes y colores navegación es confusa y está mal organizada sin responsive design 
               </p>
             </div>
             
             <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-[#e953dc] border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Performance Optimized</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Gates</h3>
               <p className="text-gray-400">
-                Smoothly rendered UI elements and efficient memory usage for a responsive experience.
+              Sobrecarga de texto texto e imágenes no respetan los espacios en blanco no hay orden para lecturauso de colores es monótono y sin contraste enlaces dispersos
               </p>
             </div>
             
             <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-[#e953dc] border-opacity-30">
-              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">Developer-Centric</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#e953dc]">inet-web</h3>
               <p className="text-gray-400">
-                Tailored for developers with quick access to code references and technical resources.
+              desorden de texto saturacion de informacio en todo tipo fondo totalmente negro caos visual y desorden no hay paleta de colores coherente
               </p>
             </div>
           </div>
