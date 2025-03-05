@@ -7,18 +7,18 @@ const RealTimeBrowserWindow = () => {
   
   const pages = [
     {
-      title: "GitHub",
-      url: "https://miit-game-front.vercel.app/",
+      title: "Museom007",
+      url: "https://www.007museum.com/",
       icon: "🐙"
     },
     {
-      title: "Stack Overflow",
-      url: "https://stackoverflow.com",
+      title: "gatesnfences",
+      url: "https://www.gatesnfences.com/",
       icon: "📚"
     },
     {
-      title: "Dev.to",
-      url: "https://dev.to",
+      title: "inet-web",
+      url: "https://www.inet-web.com/",
       icon: "👩‍💻"
     }
   ];
