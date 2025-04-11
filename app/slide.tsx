@@ -3,15 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 
-const CodeIntegrityPlatformWithBackground = () => {
+const AWSSecurityServicesWithBackground = () => {
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
-        {/* Replaced triangle with star */}
+        {/* Cloud-shaped background elements instead of stars */}
         <div 
-          className="absolute w-12 h-12 bg-orchid-700 opacity-30"
+          className="absolute w-12 h-12 bg-blue-700 opacity-30"
           style={{
-            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            clipPath: 'polygon(25% 60%, 0% 35%, 25% 10%, 50% 0%, 75% 10%, 100% 35%, 75% 60%, 80% 100%, 50% 85%, 20% 100%)',
             filter: 'blur(4px)',
             top: '40%',
             right: '15%',
@@ -19,11 +19,10 @@ const CodeIntegrityPlatformWithBackground = () => {
             animationDelay: '2s'
           }}
         />
-        {/* Added more small stars */}
         <div 
-          className="absolute w-8 h-8 bg-orchid-600 opacity-30"
+          className="absolute w-8 h-8 bg-blue-600 opacity-30"
           style={{
-            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            clipPath: 'polygon(25% 60%, 0% 35%, 25% 10%, 50% 0%, 75% 10%, 100% 35%, 75% 60%, 80% 100%, 50% 85%, 20% 100%)',
             filter: 'blur(3px)',
             top: '25%',
             left: '30%',
@@ -32,9 +31,9 @@ const CodeIntegrityPlatformWithBackground = () => {
           }}
         />
         <div 
-          className="absolute w-10 h-10 bg-orchid-400 opacity-30"
+          className="absolute w-10 h-10 bg-blue-400 opacity-30"
           style={{
-            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            clipPath: 'polygon(25% 60%, 0% 35%, 25% 10%, 50% 0%, 75% 10%, 100% 35%, 75% 60%, 80% 100%, 50% 85%, 20% 100%)',
             filter: 'blur(4px)',
             bottom: '20%',
             right: '25%',
@@ -43,9 +42,9 @@ const CodeIntegrityPlatformWithBackground = () => {
           }}
         />
         <div 
-          className="absolute w-6 h-6 bg-orchid-800 opacity-30"
+          className="absolute w-6 h-6 bg-blue-800 opacity-30"
           style={{
-            clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+            clipPath: 'polygon(25% 60%, 0% 35%, 25% 10%, 50% 0%, 75% 10%, 100% 35%, 75% 60%, 80% 100%, 50% 85%, 20% 100%)',
             filter: 'blur(2px)',
             bottom: '30%',
             left: '20%',
@@ -112,8 +111,8 @@ const CodeIntegrityPlatformWithBackground = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto p-8">
         <div className="mb-8">
-          <div className="inline-block px-4 py-2 rounded-full border border-orchid-400 text-sm font-medium">
-            Maka y Javi
+          <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
+            AWS Security
           </div>
         </div>
 
@@ -121,23 +120,23 @@ const CodeIntegrityPlatformWithBackground = () => {
           {/* Left section - Main heading and logo */}
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-12">
-              Que es el diseño de interfaces en web?
+              Cloud Security Services in AWS
             </h1>
             
             <div className="flex justify-center mb-8">
               <div className="relative w-48 h-48">
-                {/* Stylized logo with proper orchid colors */}
+                {/* AWS-styled logo */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg viewBox="0 0 120 120" width="120" height="120">
-                    <circle cx="60" cy="60" r="25" className="bg-orchid-600 opacity-70" />
-                    <text x="60" y="65" textAnchor="middle" fill="white" className="text-xl font-bold">q</text>
+                    <circle cx="60" cy="60" r="25" className="bg-blue-600 opacity-70" />
+                    <text x="60" y="65" textAnchor="middle" fill="white" className="text-xl font-bold">AWS</text>
                   </svg>
                 </div>
                 {/* Fixed image implementation using Next.js Image component */}
                 <div className="absolute inset-0">
                   <Image 
-                    src="/cerdito.png" 
-                    alt="Qodo mascot" 
+                    src="/ajolote.jpg" 
+                    alt="AWS Security" 
                     fill
                     style={{ objectFit: 'contain' }}
                     priority
@@ -146,18 +145,18 @@ const CodeIntegrityPlatformWithBackground = () => {
               </div>
             </div>
             
-            {/* Progress steps */}
+            {/* Security principles */}
             <div className="grid grid-cols-3 gap-4 mt-6">
               <div className="flex flex-col items-center">
-                <span className="text-orchid-500 font-medium">Usabilidad</span>
+                <span className="text-blue-500 font-medium">Authentication</span>
                 <div className="w-full h-px bg-gray-700 mt-2"></div>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-orchid-500 font-medium">Accesibilidad</span>
+                <span className="text-blue-500 font-medium">Authorization</span>
                 <div className="w-full h-px bg-gray-700 mt-2"></div>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-orchid-500 font-medium">Consistencia</span>
+                <span className="text-blue-500 font-medium">Encryption</span>
                 <div className="w-full h-px bg-gray-700 mt-2"></div>
               </div>
             </div>
@@ -166,96 +165,121 @@ const CodeIntegrityPlatformWithBackground = () => {
           {/* Right section - Features */}
           <div className="space-y-12">
             <div>
-              <h2 className="text-2xl font-bold mb-2">Que es el diseño de interfaces web?</h2>
+              <h2 className="text-2xl font-bold mb-2">What are AWS Security Services?</h2>
               <p className="text-gray-400">
-              El diseño de interfaces web es el proceso de crear y organizar los elementos visuales de una página web, como botones, menús y textos, para que los usuarios puedan navegar y usar el sitio de manera fácil y agradable.
+                AWS Security Services are cloud-based tools and features that help protect your data, accounts, and workloads from unauthorized access and potential threats in the AWS cloud environment.
               </p>
             </div>
             
             <div>
-              <h2 className="text-2xl font-bold mb-2">Como funciona el diseño de interfaces web?</h2>
+              <h2 className="text-2xl font-bold mb-2">Why use AWS Security Services?</h2>
               <p className="text-gray-400">
-              Los componentes de una interfaz, como la cabecera, cuerpo, pie de página, barra lateral, menú de navegación y elementos interactivos, se combinan para facilitar la navegación y mejorar la experiencia del usuario.
+                These services help you implement a comprehensive security strategy by controlling access to resources, encrypting sensitive data, managing secrets securely, and protecting your applications from web-based attacks.
               </p>
             </div>
           </div>
         </div>
         
         {/* Cards section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          {/* Card 1 */}
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Componentes</h3>
-            <p className="text-gray-400 mb-4">Los componentes de una interfaz normalmente son:</p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
+          {/* Card 1 - IAM */}
+          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
+            <h3 className="text-2xl font-bold mb-4">IAM</h3>
+            <p className="text-gray-400 mb-4">Identity and Access Management:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Header</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Manage users and permissions</span>
               </li>
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Body</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Create roles for services</span>
               </li>
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Footer</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Define access policies</span>
               </li>
-              <p className="text-gray-400 mb-4">Estos pueden variar</p>
+              <p className="text-gray-400 mb-4">Controls who can access your cloud resources and what they can do</p>
             </ul>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-orchid-600 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-orchid-800 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-600 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-800 rounded-full opacity-70"></div>
             </div>
           </div>
           
-          {/* Card 2 */}
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Es muy importante tener</h3>
-            <p className="text-gray-400 mb-4">Dentro de un diseño</p>
+          {/* Card 2 - KMS */}
+          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
+            <h3 className="text-2xl font-bold mb-4">KMS</h3>
+            <p className="text-gray-400 mb-4">Key Management Service:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Contenido de calidad</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Create encryption keys</span>
               </li>
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Retroalimentacion clara</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Manage key policies</span>
               </li>
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Interactividad</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Rotate keys automatically</span>
               </li>
-              <p className="text-gray-400 mb-4">Es importante tener estas cualidades para asegurar un producto de calidad</p>
+              <p className="text-gray-400 mb-4">Helps create and manage keys used to encrypt your data in the cloud</p>
             </ul>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-orchid-700 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-700 rounded-full opacity-70"></div>
             </div>
           </div>
           
-          {/* Card 3 */}
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-orchid-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">En codigo</h3>
-            <p className="text-gray-400 mb-4">Es importante asegurar</p>
+          {/* Card 3 - Secrets Manager */}
+          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
+            <h3 className="text-2xl font-bold mb-4">Secrets Manager</h3>
+            <p className="text-gray-400 mb-4">For sensitive information:</p>
             <ul className="space-y-4 mb-8">
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Optimizacion de carga</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Store credentials securely</span>
               </li>
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Seguridad</span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Rotate secrets automatically</span>
               </li>
               <li className="flex">
-                <span className="mr-2 text-orchid-500">•</span>
-                <span className="text-gray-400">Buena arquitectura de software </span>
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Access control for secrets</span>
               </li>
-              <p className="text-gray-400 mb-4">Estas practicas aseguran que se entregue un codigo limpio.</p>
+              <p className="text-gray-400 mb-4">Securely stores passwords, API keys, and other sensitive information</p>
             </ul>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-orchid-400 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-orchid-500 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-orchid-600 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-orchid-700 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-400 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-500 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-600 rounded-full opacity-70"></div>
+            </div>
+          </div>
+          
+          {/* Card 4 - WAF */}
+          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
+            <h3 className="text-2xl font-bold mb-4">WAF</h3>
+            <p className="text-gray-400 mb-4">Web Application Firewall:</p>
+            <ul className="space-y-4 mb-8">
+              <li className="flex">
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Block SQL injections</span>
+              </li>
+              <li className="flex">
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Prevent XSS attacks</span>
+              </li>
+              <li className="flex">
+                <span className="mr-2 text-blue-500">•</span>
+                <span className="text-gray-400">Custom security rules</span>
+              </li>
+              <p className="text-gray-400 mb-4">Protects web applications from common exploits and vulnerabilities</p>
+            </ul>
+            <div className="flex space-x-4">
+              <div className="w-8 h-8 bg-blue-400 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-600 rounded-full opacity-70"></div>
+              <div className="w-8 h-8 bg-blue-700 rounded-full opacity-70"></div>
             </div>
           </div>
         </div>
@@ -263,15 +287,15 @@ const CodeIntegrityPlatformWithBackground = () => {
         {/* Footer process steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Codigo limpio</div>
-            <div className="hidden md:block text-orchid-500">→</div>
+            <div className="text-sm text-gray-400">Identify security needs</div>
+            <div className="hidden md:block text-blue-500">→</div>
           </div>
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Codido seguro</div>
-            <div className="hidden md:block text-orchid-500">→</div>
+            <div className="text-sm text-gray-400">Implement security services</div>
+            <div className="hidden md:block text-blue-500">→</div>
           </div>
           <div className="flex items-center">
-            <div className="text-sm text-gray-400">Codigo optimizado</div>
+            <div className="text-sm text-gray-400">Monitor and maintain security</div>
           </div>
         </div>
       </div>
@@ -279,4 +303,4 @@ const CodeIntegrityPlatformWithBackground = () => {
   );
 };
 
-export default CodeIntegrityPlatformWithBackground;
+export default AWSSecurityServicesWithBackground;

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Users, User, Sparkles, Code, Palette, Briefcase, Database } from 'lucide-react';
+import { Users, User, Sparkles, Code } from 'lucide-react';
 
 const InteractiveTeam = () => {
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
@@ -28,29 +28,13 @@ const InteractiveTeam = () => {
 
   const teamMembers = [
     {
-      id: 1,
-      name: "Javier",
-      role: "Diseñador",
-      skills: ["Scrum Master", "Spiderman", "Roba corazones"],
-      description: "Hombre determinado en hacer que sus conocimientos en scrum se apliquen todo el tiempo, ama las buenas practicas y si no las aplicas te detesta, ten cuidado con el",
-      color: "#94366A",
-      accent: "#74204F",
-      icon: <Palette className="h-5 w-5" />,
-      characteristics: {
-        antennas: true,
-        expression: "happy",
-        armsUp: true,
-        specialFeature: "glow"
-      }
-    },
-    {
       id: 2,
       name: "River",
-      role: "Guapo",
-      skills: ["Backend", "Nose", "Olvidadizo"],
-      description: "River es un buen hombre, su esposa lo ama, todo el tiempo el vuelve a casa lleva el pan de cada dia y no deja que nadie se meta con su hijo Isaac, el es un buen hombre",
-      color: "#E9A9CF",
-      accent: "#B75A9C",
+      role: "Handsome",
+      skills: ["Backend", "I don't know", "Forgetful"],
+      description: "River is a good man, his wife loves him, he always comes home bringing the daily bread and doesn't let anyone mess with his son Isaac, he is a good man.",
+      color: "#A9C2E9",
+      accent: "#5A7CB7",
       icon: <Sparkles className="h-5 w-5" />,
       characteristics: {
         antennas: false,
@@ -63,10 +47,10 @@ const InteractiveTeam = () => {
       id: 3,
       name: "Tomasin",
       role: "Frontend",
-      skills: ["React/Vue", "CSS/Tailwind", "Toco usar Next"],
-      description: "Previamente estaba obsesionado con Vue, pero recientemente fue obligado a usar next. la vida a cambiado y ahora nada tiene sentido desde que el utiliza next.",
-      color: "#D982B5",
-      accent: "#B75A9C",
+      skills: ["React/Vue", "CSS/Tailwind", "Had to use Next"],
+      description: "Previously obsessed with Vue, but recently forced to use Next. Life has changed, and now nothing makes sense since he started using Next.",
+      color: "#82A9D9",
+      accent: "#5A7CB7",
       icon: <Code className="h-5 w-5" />,
       characteristics: {
         antennas: true,
@@ -75,38 +59,6 @@ const InteractiveTeam = () => {
         specialFeature: "glasses"
       }
     },
-    {
-      id: 4,
-      name: "Makabeuz",
-      role: "Burgues",
-      skills: ["Gacha Lover", "ARPG", "Gambling"],
-      description: "Maka vivia feliz en su casa, un dia le cayo un meteorito, ahora es un robot, pero no cualquier robot, un robot burgues, el robot burgues",
-      color: "#F4CCDF",
-      accent: "#E9A9CF",
-      icon: <Briefcase className="h-5 w-5" />,
-      characteristics: {
-        antennas: false,
-        expression: "happy",
-        armsUp: false,
-        specialFeature: "bowtie"
-      }
-    },
-    {
-      id: 5,
-      name: "Dylan",
-      role: "Pecaminoso",
-      skills: ["Amante de la naturaleza", "Hacker en css", "Seductor"],
-      description: "Nose que ponerle, se supone que le diga a dylan que me diga una descripcion pequena pero esta mute asi que realmente no puedo preguntarle.",
-      color: "#B75A9C",
-      accent: "#94366A", 
-      icon: <Database className="h-5 w-5" />,
-      characteristics: {
-        antennas: true,
-        expression: "thoughtful",
-        armsUp: true,
-        specialFeature: "hat"
-      }
-    }
   ];
 
   const selectMember = (id: number) => {
@@ -202,7 +154,7 @@ const InteractiveTeam = () => {
         {characteristics.specialFeature === "ears" && renderSpecialFeature("ears")}
         {characteristics.specialFeature === "hat" && renderSpecialFeature("hat")}
         
-        {/* cabeza */}
+        {/* head */}
         <rect
           x="25"
           y="20"
@@ -215,7 +167,7 @@ const InteractiveTeam = () => {
           strokeWidth="2.5"
         />
         
-        {/* cara */}
+        {/* face */}
         <rect
           x="30"
           y="25"
@@ -254,7 +206,7 @@ const InteractiveTeam = () => {
           </>
         )}
         
-        {/* cuerpo */}
+        {/* body */}
         <rect
           x="30"
           y="60"
@@ -350,16 +302,16 @@ const InteractiveTeam = () => {
       
       <div className="relative z-10 max-w-6xl mx-auto p-8">
         <div className="mb-8">
-          <div className="inline-block px-4 py-2 rounded-full border border-orchid-400 text-sm font-medium">
+          <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
             Rivers
           </div>
         </div>
         
-        <h2 className="text-4xl font-bold mb-2 text-orchid-600 flex items-center gap-2">
+        <h2 className="text-4xl font-bold mb-2 text-blue-600 flex items-center gap-2">
           <Users className="h-8 w-8" />
-          NOSOTROS
+          About us
         </h2>
-        <p className="text-gray-400 mb-10">Aqui una breve descripcion de nosotros mismos.</p>
+        <p className="text-gray-400 mb-10">In here we can find a little description of us</p>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
           <div className="lg:col-span-1">
@@ -370,9 +322,9 @@ const InteractiveTeam = () => {
                   onClick={() => selectMember(member.id)}
                   className={`cursor-pointer transition-all duration-300 ${
                     selectedMember === member.id 
-                    ? 'ring-4 ring-orchid-300 shadow-lg' 
+                    ? 'ring-4 ring-blue-300 shadow-lg' 
                     : 'hover:shadow-md'
-                  } rounded-lg overflow-hidden bg-background bg-opacity-20 backdrop-blur-sm border border-orchid-900 border-opacity-30 p-4`}
+                  } rounded-lg overflow-hidden bg-background bg-opacity-20 backdrop-blur-sm border border-blue-900 border-opacity-30 p-4`}
                 >
                   <div className="relative">
                     <div className="w-full aspect-square overflow-hidden mb-3">
@@ -386,7 +338,7 @@ const InteractiveTeam = () => {
                     <div className="text-center">
                       <h3 className="font-bold text-foreground text-lg flex items-center justify-center gap-1">
                         {member.name}
-                        <User className="h-4 w-4 text-orchid-600" />
+                        <User className="h-4 w-4 text-blue-600" />
                       </h3>
                       <p className="text-sm font-medium flex items-center justify-center gap-1" style={{ color: member.color }}>
                         {member.icon}
@@ -399,7 +351,7 @@ const InteractiveTeam = () => {
             </div>
           </div>
           
-          <div className="lg:col-span-2 relative h-96 overflow-hidden rounded-lg bg-transparent bg-opacity-70 backdrop-blur-sm border border-orchid-900 border-opacity-30 shadow-lg">
+          <div className="lg:col-span-2 relative h-96 overflow-hidden rounded-lg bg-transparent bg-opacity-70 backdrop-blur-sm border border-blue-900 border-opacity-30 shadow-lg">
             <div 
               className="absolute inset-0 transition-transform duration-500 ease-in-out p-6 flex flex-col"
               style={{ transform: `translateX(${positionX}%)` }}
@@ -431,7 +383,7 @@ const InteractiveTeam = () => {
                     </p>
                     <div className="mt-4">
                       <h4 className="font-bold text-foreground mb-2">
-                        Habilidades
+                        Skills
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {currentMember.skills.map((skill, index) => (
@@ -459,7 +411,7 @@ const InteractiveTeam = () => {
                           height="40"
                           rx="10"
                           ry="10"
-                          fill="#D982B5"
+                          fill="#82A9D9"
                           stroke="black"
                           strokeWidth="2.5"
                         />
@@ -498,39 +450,34 @@ const InteractiveTeam = () => {
                           height="15"
                           rx="3"
                           ry="3"
-                          fill="#D982B5"
+                          fill="#82A9D9"
                           stroke="black"
                           strokeWidth="2.5"
                         />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 text-orchid-600">
-                      Conocenos
+                    <h3 className="text-2xl font-bold mb-3 text-blue-600">
+                      Meet Us
                     </h3>
-                    <p className="text-gray-400">Seleccciona a alguno de nosotros para ver mas informacion en detalle</p>
+                    <p className="text-gray-400">Select one of us to see more detailed information</p>
                   </div>
                 </div>
               )}
             </div>
           </div>
-          
-          {/* Repositioned and resized bingus image */}
-          <div className="absolute bottom-1 right-40 w-1/4 lg:w-1/6 h-auto z-10">
-            <img src="/bingus.png" alt="Nuestro equipo" className="w-full h-full object-contain"/>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Diseño interfaces</div>
-            <div className="hidden md:block text-orchid-500">→</div>
+            <div className="text-sm text-gray-400">Interface Design</div>
+            <div className="hidden md:block text-blue-500">→</div>
           </div>
           <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">Presentacion</div>
-            <div className="hidden md:block text-orchid-500">→</div>
+            <div className="text-sm text-gray-400">Presentation</div>
+            <div className="hidden md:block text-blue-500">→</div>
           </div>
           <div className="flex items-center">
-            <div className="text-sm text-gray-400">Enserio se ve esto?</div>
+            <div className="text-sm text-gray-400">Is this really visible?</div>
           </div>
         </div>
       </div>

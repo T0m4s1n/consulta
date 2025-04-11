@@ -4,7 +4,6 @@ import Presentation from './Presentation';
 import Slide from './slide';
 import Slode from './slode';
 import Window from './window';
-import Pagesx from './Pagesx'
 
 const ParentComponent = () => {
   return (
@@ -13,7 +12,6 @@ const ParentComponent = () => {
         <Slide/>
         <Slode/>
         <Window/>
-        <Pagesx/>
       </div>
   );
 };
