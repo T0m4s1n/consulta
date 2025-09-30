@@ -57,30 +57,30 @@ export default function Presentation() {
             </div>
           </div>
           
-          <div className="bg-white border border-blue-200 rounded-xl overflow-hidden shadow-sm animate-fade-in-up-delayed">
-            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-blue-100">
+          <div className="bg-white dark:bg-gray-800 border border-blue-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm animate-fade-in-up-delayed">
+            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-blue-100 dark:divide-gray-700">
               <div className="p-4 md:p-6">
-                <div className="text-blue-700 font-semibold mb-2">
+                <div className="text-blue-700 dark:text-blue-400 font-semibold mb-2">
                   Guiados
                 </div>
-                <ul className="text-xs md:text-sm text-gray-700 space-y-1 md:space-y-2">
+                <ul className="text-xs md:text-sm text-gray-700 dark:text-gray-300 space-y-1 md:space-y-2">
                   <li>UTP/STP, Coaxial, Fibra óptica</li>
                   <li>Categorías Cat5e–Cat8, conectores RJ45, LC/SC</li>
                   <li>Topologías y canal permanente</li>
                 </ul>
                     </div>
               <div className="p-4 md:p-6">
-                <div className="text-blue-700 font-semibold mb-2">
+                <div className="text-blue-700 dark:text-blue-400 font-semibold mb-2">
                   No guiados
                 </div>
-                <ul className="text-xs md:text-sm text-gray-700 space-y-1 md:space-y-2">
+                <ul className="text-xs md:text-sm text-gray-700 dark:text-gray-300 space-y-1 md:space-y-2">
                   <li>Radio, microondas, IR</li>
                   <li>Wi‑Fi, Bluetooth, 5G</li>
                   <li>Rendimiento vs latencia vs EMI</li>
                 </ul>
               </div>
             </div>
-            <div className="px-6 py-4 border-t border-blue-100 text-sm text-gray-700">
+            <div className="px-6 py-4 border-t border-blue-100 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300">
               Incluye comparativas guiado vs no guiado e impacto de IPv4/IPv6 y protocolos.
             </div>
           </div>

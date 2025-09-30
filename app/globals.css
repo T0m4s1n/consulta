@@ -7,9 +7,11 @@
 }
 
 :root {
-  /* Background and foreground */
+  /* Background and foreground - Light Mode */
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(0, 0%, 9%);
+  --card-bg: hsl(0, 0%, 100%);
+  --border-color: hsl(214, 32%, 91%);
   
   /* Orchid color palette in HSL */
   --orchid-50: hsl(300, 100%, 97%);    /* #FFF4FF */
@@ -28,10 +30,20 @@
   --font-family: 'Poppins', var(--font-geist-sans), sans-serif;
 }
 
+/* Dark Mode */
+.dark {
+  --background: hsl(0, 0%, 13.3%);    /* #222222 */
+  --foreground: hsl(0, 0%, 93%);      /* #EDEDED */
+  --card-bg: hsl(0, 0%, 18%);         /* #2D2D2D */
+  --border-color: hsl(0, 0%, 30%);    /* #4D4D4D */
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(0, 0%, 4%);      /* #0A0A0A */
-    --foreground: hsl(0, 0%, 93%);     /* #EDEDED */
+  :root:not(.light) {
+    --background: hsl(0, 0%, 13.3%);  /* #222222 */
+    --foreground: hsl(0, 0%, 93%);    /* #EDEDED */
+    --card-bg: hsl(0, 0%, 18%);       /* #2D2D2D */
+    --border-color: hsl(0, 0%, 30%);  /* #4D4D4D */
   }
 }
 
