@@ -1,328 +1,408 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import { Radio, Satellite, GitCompare, Zap, Signal, CheckCircle2 } from 'lucide-react';
 
-const AWSSecurityPlatform = () => {
-  const hasAnimatedRef = useRef(false);
+const Card = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
+    <h3 className="text-2xl font-bold mb-3">{title}</h3>
+    <div className="text-gray-600 leading-relaxed">{children}</div>
+  </div>
+);
 
-  useEffect(() => {
-    if (hasAnimatedRef.current) return;
-
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach((element, index) => {
-      setTimeout(() => {
-        element.classList.add('active');
-      }, 300 * index);
-    });
-    
-    hasAnimatedRef.current = true;
-  }, []);
-
+export default function UnguidedMediaAndComparisons() {
   return (
     <div className="relative w-full min-h-screen text-foreground bg-background font-sans overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <div 
-          className="absolute w-64 h-64 rounded-full bg-blue-700 opacity-30"
-          style={{
-            filter: 'blur(80px)',
-            top: '20%',
-            right: '10%',
-            animation: 'floatReverse 10s ease-in-out infinite',
-          }}
-        />
+      <div className="absolute inset-0 overflow-hidden bg-grid">
+        <div className="absolute w-64 h-64 rounded-full bg-blue-500 opacity-20 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '25%', left: '10%' }} />
       </div>
-      
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-        <div className="mb-8">
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+        <div className="mb-8 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
-            AWS Cloud Security
+            Medios no guiados y comparativas
           </div>
         </div>
-      
-        <div className="text-center mb-20 fade-in opacity-0 transition-opacity duration-1000">
-          <div className="text-sm font-semibold text-blue-400 tracking-widest uppercase mb-3">
-            SECURITY. SERVICES.
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold transition-transform duration-700 hover:scale-105">
-            AWS Security Best Practices
+
+        <div className="text-center mb-12 animate-fade-in-up">
+          <h1 className="text-4xl font-bold mb-4">
+            Medios de Transmisión No Guiados
           </h1>
+          <p className="text-xl text-gray-600">Ondas electromagnéticas en el espacio</p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          <div className="p-8 bg-background bg-opacity-20 backdrop-blur-sm rounded-lg border border-blue-900 border-opacity-30 fade-in opacity-0 transition-all duration-700 hover:shadow-lg">
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 flex-shrink-0 mr-3 transition-transform duration-500 hover:rotate-12">
-                <svg viewBox="0 0 24 24" className="w-full h-full text-blue-500">
-                  <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
-                </svg>
+
+        {/* Sección: Introducción */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+            <Radio size={32} className="mb-4 text-blue-600" />
+            <div className="text-xl font-bold mb-2">Flexibilidad</div>
+            <p className="text-gray-600">Movilidad total sin cables físicos</p>
+          </div>
+
+          <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+            <Satellite size={32} className="mb-4 text-blue-600" />
+            <div className="text-xl font-bold mb-2">Alcance</div>
+            <p className="text-gray-600">Sin límites de cableado</p>
+          </div>
+
+          <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+            <Signal size={32} className="mb-4 text-blue-600" />
+            <div className="text-xl font-bold mb-2">Escalabilidad</div>
+            <p className="text-gray-600">Fácil expansión de red</p>
+          </div>
+        </div>
+
+        {/* Sección: Ondas de Radio */}
+        <div className="mb-8">
+          <Card title="Ondas de Radio">
+            <div className="bg-white rounded-lg p-6 border border-blue-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Radio size={32} className="text-blue-600" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">Ondas de Radio</div>
+                  <div className="text-sm text-gray-600">3 kHz - 300 GHz</div>
+                </div>
               </div>
-              <h2 className="text-sm font-bold text-blue-500 tracking-wider uppercase">
-                Identity Management
-              </h2>
-            </div>
-            
-            <h3 className="text-2xl font-bold mb-4">
-              IAM (Identity and Access Management)
-            </h3>
-            
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              IAM is the foundation of AWS security, controlling who can access your cloud resources and what they can do with them. Implement the principle of least privilege by granting only required permissions. Use IAM roles for services rather than sharing access keys. Enable multi-factor authentication (MFA) for all users, especially those with administrative access.
-            </p>
-          </div>
-          
-          <div className="p-8 bg-background bg-opacity-20 backdrop-blur-sm rounded-lg border border-blue-900 border-opacity-30 fade-in opacity-0 transition-all duration-700 hover:shadow-lg">
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 flex-shrink-0 mr-3 transition-transform duration-500 hover:rotate-12">
-                <svg viewBox="0 0 24 24" className="w-full h-full text-blue-500">
-                  <path fill="currentColor" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z" />
-                </svg>
+              
+              <svg viewBox="0 0 600 140" className="w-full h-32 mb-4">
+                <circle cx="300" cy="70" r="20" fill="#3b82f6" />
+                <circle cx="300" cy="70" r="40" fill="#3b82f6" opacity="0.6" className="wave-circle" />
+                <circle cx="300" cy="70" r="60" fill="#3b82f6" opacity="0.4" className="wave-circle" style={{animationDelay: '0.3s'}} />
+                <circle cx="300" cy="70" r="80" fill="#3b82f6" opacity="0.2" className="wave-circle" style={{animationDelay: '0.6s'}} />
+                
+                <text x="300" y="75" textAnchor="middle" className="text-sm font-bold" fill="#fff">TX</text>
+              </svg>
+
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Velocidad: hasta 300 Mbps</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Alcance: varios kilómetros</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Uso: WiFi, Bluetooth, Radio</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Penetración: Alta</span>
+                </div>
               </div>
-              <h2 className="text-sm font-bold text-blue-500 tracking-wider uppercase">
-                Encryption
-              </h2>
             </div>
-            
-            <h3 className="text-2xl font-bold mb-4">
-              KMS (Key Management Service)
-            </h3>
-            
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              KMS helps you create, manage, and protect encryption keys used to encrypt your data in AWS. Implement envelope encryption for sensitive data. Set up automatic key rotation policies to enhance security. Use customer managed keys (CMKs) for better control over your encryption practices and to meet compliance requirements.
-            </p>
-          </div>
+          </Card>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 fade-in opacity-0 transition-all duration-700">
-          <div className="p-8 bg-background bg-opacity-20 backdrop-blur-sm rounded-lg border border-blue-900 border-opacity-30 fade-in opacity-0 transition-all duration-700 hover:shadow-lg">
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 flex-shrink-0 mr-3 transition-transform duration-500 hover:rotate-12">
-                <svg viewBox="0 0 24 24" className="w-full h-full text-blue-500">
-                  <path fill="currentColor" d="M7,14A2,2 0 0,1 5,12A2,2 0 0,1 7,10A2,2 0 0,1 9,12A2,2 0 0,1 7,14M12.65,10C11.83,7.67 9.61,6 7,6A6,6 0 0,0 1,12A6,6 0 0,0 7,18C9.61,18 11.83,16.33 12.65,14H17V18H21V14H23V10H12.65Z" />
-                </svg>
+
+        {/* Sección: Microondas */}
+        <div className="mb-8">
+          <Card title="Microondas">
+            <div className="bg-white rounded-lg p-6 border border-blue-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Signal size={32} className="text-blue-600" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">Microondas</div>
+                  <div className="text-sm text-gray-600">1 GHz - 300 GHz</div>
+                </div>
               </div>
-              <h2 className="text-sm font-bold text-blue-500 tracking-wider uppercase">
-                Credentials Management
-              </h2>
-            </div>
-            
-            <h3 className="text-2xl font-bold mb-4">
-              Secrets Manager
-            </h3>
-            
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              AWS Secrets Manager provides a secure way to store and retrieve credentials, API keys, and other sensitive information. Configure automatic rotation of secrets to maintain security. Integrate with other AWS services for seamless authentication. Use fine-grained access control to limit who can retrieve specific secrets based on their role or needs.
-            </p>
-          </div>
-          
-          <div className="p-8 bg-background bg-opacity-20 backdrop-blur-sm rounded-lg border border-blue-900 border-opacity-30 fade-in opacity-0 transition-all duration-700 hover:shadow-lg">
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 flex-shrink-0 mr-3 transition-transform duration-500 hover:rotate-12">
-                <svg viewBox="0 0 24 24" className="w-full h-full text-blue-500">
-                  <path fill="currentColor" d="M12,12H19C18.47,16.11 15.72,19.78 12,20.92V12H5V6.3L12,3.19V12M12,1L3,5V11C3,16.55 6.84,21.73 12,23C17.16,21.73 21,16.55 21,11V5L12,1Z" />
-                </svg>
+              
+              <svg viewBox="0 0 600 100" className="w-full h-20 mb-4">
+                <line x1="50" y1="50" x2="550" y2="50" stroke="#3b82f6" strokeWidth="3" strokeDasharray="15,5" />
+                
+                <circle cx="100" cy="50" r="5" fill="#2563eb" className="wave-circle" />
+                <circle cx="200" cy="50" r="5" fill="#2563eb" className="wave-circle" style={{animationDelay: '0.2s'}} />
+                <circle cx="300" cy="50" r="5" fill="#2563eb" className="wave-circle" style={{animationDelay: '0.4s'}} />
+                <circle cx="400" cy="50" r="5" fill="#2563eb" className="wave-circle" style={{animationDelay: '0.6s'}} />
+                <circle cx="500" cy="50" r="5" fill="#2563eb" className="wave-circle" style={{animationDelay: '0.8s'}} />
+                
+                <polygon points="50,40 50,60 35,50" fill="#3b82f6" />
+                <polygon points="550,40 550,60 565,50" fill="#3b82f6" />
+              </svg>
+
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Velocidad: hasta 1 Gbps</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Uso: Enlaces punto a punto</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Alcance: 50 km</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Visión directa requerida</span>
+                </div>
               </div>
-              <h2 className="text-sm font-bold text-blue-500 tracking-wider uppercase">
-                Application Protection
-              </h2>
             </div>
-            
-            <h3 className="text-2xl font-bold mb-4">
-              WAF (Web Application Firewall)
-            </h3>
-            
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              AWS WAF helps protect your web applications from common exploits like SQL injection and cross-site scripting (XSS). Deploy WAF in front of your applications to filter malicious traffic. Create custom rules to address specific security requirements and threats. Implement rate-based rules to prevent DDoS attacks by limiting the number of requests from any single IP.
+          </Card>
+        </div>
+
+        {/* Sección: Satélite */}
+        <div className="mb-8">
+          <Card title="Comunicación Satelital">
+            <div className="bg-white rounded-lg p-6 border border-blue-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Satellite size={32} className="text-blue-600" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">Satélite</div>
+                  <div className="text-sm text-gray-600">Cobertura global</div>
+                </div>
+              </div>
+
+              <svg viewBox="0 0 600 140" className="w-full h-32 mb-4">
+                <circle cx="300" cy="70" r="80" fill="#3b82f6" opacity="0.1" />
+                <circle cx="300" cy="70" r="20" fill="#3b82f6" />
+                <text x="300" y="75" textAnchor="middle" className="text-sm" fill="#fff">SAT</text>
+                
+                <path d="M300 90 Q250 120, 100 130" stroke="#3b82f6" strokeWidth="3" strokeDasharray="8,4" fill="none" />
+                <path d="M300 90 Q350 120, 500 130" stroke="#3b82f6" strokeWidth="3" strokeDasharray="8,4" fill="none" />
+                
+                <rect x="80" y="125" width="40" height="12" rx="3" fill="#2563eb" />
+                <text x="100" y="134" textAnchor="middle" className="text-xs" fill="#fff">A</text>
+                
+                <rect x="480" y="125" width="40" height="12" rx="3" fill="#2563eb" />
+                <text x="500" y="134" textAnchor="middle" className="text-xs" fill="#fff">B</text>
+              </svg>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-800">50 Mbps</div>
+                  <div className="text-xs text-gray-600">Velocidad</div>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-800">Global</div>
+                  <div className="text-xs text-gray-600">Cobertura</div>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-800">500ms</div>
+                  <div className="text-xs text-gray-600">Latencia</div>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-800">Alto</div>
+                  <div className="text-xs text-gray-600">Costo</div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Sección: Infrarrojo */}
+        <div className="mb-8">
+          <Card title="Infrarrojo">
+            <div className="bg-white rounded-lg p-6 border border-blue-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Zap size={32} className="text-blue-600" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">Infrarrojo</div>
+                  <div className="text-sm text-gray-600">Corto alcance</div>
+                </div>
+              </div>
+              
+              <svg viewBox="0 0 600 100" className="w-full h-20 mb-4">
+                <defs>
+                  <radialGradient id="ir-glow">
+                    <stop offset="0%" style={{stopColor: '#3b82f6', stopOpacity: 1}} />
+                    <stop offset="100%" style={{stopColor: '#3b82f6', stopOpacity: 0}} />
+                  </radialGradient>
+                </defs>
+                
+                <circle cx="100" cy="50" r="25" fill="url(#ir-glow)" className="wave-circle" />
+                <circle cx="100" cy="50" r="12" fill="#2563eb" />
+                
+                <line x1="130" y1="50" x2="470" y2="50" stroke="#60a5fa" strokeWidth="5" opacity="0.7" />
+                
+                <circle cx="500" cy="50" r="25" fill="url(#ir-glow)" className="wave-circle" style={{animationDelay: '0.5s'}} />
+                <circle cx="500" cy="50" r="12" fill="#2563eb" />
+              </svg>
+
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Velocidad: hasta 16 Mbps</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Alcance: 5-10 metros</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Uso: Controles remotos</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="text-green-600" size={18} />
+                  <span>Línea de vista necesaria</span>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Comparación de medios inalámbricos */}
+        <div className="mb-8">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold mb-2">Comparación de Medios Inalámbricos</h2>
+            <p className="text-gray-600">¿Cuál es mejor para tu proyecto?</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-300 shadow-sm">
+              <div className="text-xl font-bold mb-3">Radio</div>
+              <div className="space-y-2 text-sm mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Penetra obstáculos</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Económico</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span>Interferencias</span>
+                </div>
+              </div>
+              <div className="text-sm font-semibold text-blue-600">WiFi, Bluetooth</div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-300 shadow-sm">
+              <div className="text-xl font-bold mb-3">Microondas</div>
+              <div className="space-y-2 text-sm mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Alta velocidad</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Gran ancho banda</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <span>Línea de vista</span>
+                </div>
+              </div>
+              <div className="text-sm font-semibold text-blue-600">Enlaces rurales</div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-300 shadow-sm">
+              <div className="text-xl font-bold mb-3">Satélite</div>
+              <div className="space-y-2 text-sm mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Cobertura global</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span>Alta latencia</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <span>Muy costoso</span>
+                </div>
+              </div>
+              <div className="text-sm font-semibold text-blue-600">Zonas remotas</div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border-2 border-blue-300 shadow-sm">
+              <div className="text-xl font-bold mb-3">Infrarrojo</div>
+              <div className="space-y-2 text-sm mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Muy seguro</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <span>Corto alcance</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <span>Línea de vista</span>
+                </div>
+              </div>
+              <div className="text-sm font-semibold text-blue-600">Control remoto</div>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-blue-50 rounded-lg p-6 border border-blue-200 text-center">
+            <div className="text-xl font-bold mb-2">Conclusión</div>
+            <p className="text-gray-700">La tecnología inalámbrica ofrece movilidad y flexibilidad, ideal cuando el cableado no es viable</p>
+          </div>
+        </div>
+
+        {/* Comparativa guiado vs no guiado y protocolos */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+          <Card title="Comparativa: guiado vs no guiado">
+            <ul className="list-disc ml-6 space-y-1 text-sm">
+              <li>Latencia: guiado (fibra/UTP) &lt; no guiado (aire).</li>
+              <li>EMI/seguridad: guiado inmune; RF expuesto a interferencias.</li>
+              <li>Movilidad y despliegue: no guiado es más flexible y rápido.</li>
+              <li>Capacidad pico: fibra &gt;&gt; RF; Wi‑Fi 7 mejora LAN.</li>
+              <li>Costes: RF menor cableado inicial; guiado reduce retrabajos.</li>
+            </ul>
+          </Card>
+
+          <Card title="Protocolos y direccionamiento (IPv4/IPv6)">
+            <p className="text-sm">
+              IP funciona igual sobre ambos medios. IPv6 aporta autoconfiguración (SLAAC), más subredes y mejor soporte IoT. 
+              Capa 2 cambia (802.3 vs 802.11/3GPP), pero IP se encapsula de forma uniforme.
             </p>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 fade-in opacity-0 transition-all duration-700">
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Principle of Least Privilege</h3>
-            <p className="text-gray-400 mb-4">Key IAM best practice:</p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Grant only the permissions required for a task—no more, no less.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Regularly audit and remove unused permissions to reduce security risks.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Use IAM Access Analyzer to identify resources shared with external entities.</span>
-              </li>
-            </ul>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-blue-800 rounded-full opacity-70"></div>
-            </div>
-          </div>
+          </Card>
 
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Data Encryption Strategy</h3>
-            <p className="text-gray-400 mb-4">KMS implementation:</p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Encrypt data at rest across all AWS services using KMS.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Implement automatic key rotation to enhance security.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Use AWS CloudTrail to monitor and audit key usage.</span>
-              </li>
-            </ul>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-700 rounded-full opacity-70"></div>
-            </div>
-          </div>
-
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">WAF Protection Rules</h3>
-            <p className="text-gray-400 mb-4">Key security controls:</p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Block SQL injection attacks with predefined rule sets.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Prevent cross-site scripting (XSS) with content inspection.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Implement geo-restriction to block traffic from suspicious regions.</span>
-              </li>
-            </ul>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-400 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-blue-500 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-blue-600 rounded-full opacity-70"></div>
-            </div>
-          </div>
+          <Card title="Pico de uso y más utilizado">
+            <p className="text-sm">
+              El acceso más usado es Wi‑Fi. El backbone y las troncales siguen dominados por fibra hacia 400G/800G.
+            </p>
+          </Card>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 fade-in opacity-0 transition-all duration-700">
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Multi-Factor Authentication</h3>
-            <p className="text-gray-400 mb-4">IAM security enhancement:</p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Enable MFA for all IAM users, especially those with administrative access.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Use virtual MFA, hardware tokens, or U2F security keys.</span>
-              </li>
-            </ul>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-blue-800 rounded-full opacity-70"></div>
-            </div>
-          </div>
-
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Secrets Rotation</h3>
-            <p className="text-gray-400 mb-4">Secrets Manager capability:</p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Configure automatic rotation for database credentials and API keys.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Use Lambda functions to handle custom rotation logic.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Set rotation schedules based on security requirements.</span>
-              </li>
-            </ul>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-700 rounded-full opacity-70"></div>
-            </div>
-          </div>
-
-          <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
-            <h3 className="text-2xl font-bold mb-4">Rate-Based Protection</h3>
-            <p className="text-gray-400 mb-4">WAF advanced feature:</p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Set rate limits to prevent DDoS attacks and brute force attempts.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Block IP addresses that exceed thresholds automatically.</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2 text-blue-500">•</span>
-                <span className="text-gray-400">Combine with AWS Shield for comprehensive DDoS protection.</span>
-              </li>
-            </ul>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-400 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-blue-500 rounded-full opacity-70"></div>
-              <div className="w-8 h-8 bg-blue-600 rounded-full opacity-70"></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-16 fade-in opacity-0 transition-all duration-700">
-          <h2 className="text-sm font-bold text-blue-500 tracking-widest uppercase">
-            COMPREHENSIVE CLOUD SECURITY
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-12">
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-400">Identity &amp; Access</div>
-              <div className="hidden md:block text-blue-500">→</div>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-400">Data Encryption</div>
-              <div className="hidden md:block text-blue-500">→</div>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-400">Secrets Management</div>
-              <div className="hidden md:block text-blue-500">→</div>
-            </div>
-            <div className="flex items-center">
-              <div className="text-sm text-gray-400">Application Protection</div>
-            </div>
+        <div className="mt-8 bg-white rounded-lg border p-6 animate-fade-in-up">
+          <div className="flex items-center gap-2 font-semibold mb-2"><GitCompare size={18} className="text-blue-600" /> Matriz resumida</div>
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-2 text-xs">
+            <div className="font-semibold">Criterio</div>
+            <div className="font-semibold">Guiado</div>
+            <div className="font-semibold">No guiado</div>
+            <div className="font-semibold">Doméstico</div>
+            <div className="font-semibold">Empresarial</div>
+            <div className="font-semibold">Industrial</div>
+            <div>Latencia</div>
+            <div>Muy baja</div>
+            <div>Variable</div>
+            <div>Baja‑media</div>
+            <div>Muy baja</div>
+            <div>Muy baja</div>
+            <div>EMI</div>
+            <div>Inmune (fibra)</div>
+            <div>Sensible</div>
+            <div>Media</div>
+            <div>Baja</div>
+            <div>Muy baja</div>
+            <div>Movilidad</div>
+            <div>Baja</div>
+            <div>Alta</div>
+            <div>Alta</div>
+            <div>Media</div>
+            <div>Alta</div>
+            <div>Coste</div>
+            <div>Medio‑alto</div>
+            <div>Bajo‑medio</div>
+            <div>Bajo</div>
+            <div>Medio</div>
+            <div>Medio‑alto</div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes float {
-          0% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(5deg); }
-          100% { transform: translateY(0px) rotate(0deg); }
-        }
-        
-        @keyframes floatReverse {
-          0% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(20px) rotate(-5deg); }
-          100% { transform: translateY(0px) rotate(0deg); }
-        }
-        
-        .fade-in {
-          transform: translateY(10px);
-        }
-        
-        .fade-in.active {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
     </div>
   );
-};
-
-export default AWSSecurityPlatform;
+}

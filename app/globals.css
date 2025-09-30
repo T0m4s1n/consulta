@@ -109,3 +109,102 @@ body {
 .border-orchid-800 { border-color: var(--orchid-800); }
 .border-orchid-900 { border-color: var(--orchid-900); }
 .border-orchid-950 { border-color: var(--orchid-950); }
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseGlow {
+  0% { opacity: 0.4; transform: scale(0.98); }
+  50% { opacity: 0.9; transform: scale(1.02); }
+  100% { opacity: 0.4; transform: scale(0.98); }
+}
+@keyframes dash {
+  0% { stroke-dashoffset: 120; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes wave {
+  0% { transform: scale(0.9); opacity: 0.4; }
+  70% { opacity: 0.0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+.animate-fade-in-up { animation: fadeInUp 600ms ease-out both; }
+.animate-fade-in-up-delayed { animation: fadeInUp 800ms 120ms ease-out both; }
+.animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+.line-animated {
+  stroke-dasharray: 6 6;
+  animation: dash 1.6s ease-in-out infinite alternate;
+}
+.wave-circle {
+  transform-origin: center;
+  animation: wave 2.2s ease-out infinite;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(30, 64, 175, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 64, 175, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px;
+}
+
+/* Smooth scroll y snap points para presentación */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.presentation-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  scroll-padding-top: 0;
+  scroll-snap-stop: always;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  transition: scroll 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.presentation-slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2rem 0;
+}
+
+/* Animación más rápida */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+/* Mejoras de transición */
+@media (prefers-reduced-motion: no-preference) {
+  .presentation-container {
+    scroll-behavior: smooth;
+  }
+}

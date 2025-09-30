@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Presentacion",
-  description: "Presentacion para la materia de interfaces",
+  title: "Medios de Transmisión - Presentación",
+  description: "Medios de transmisión guiados y cableado estructurado - Presentación técnica para ingenieros",
 };
 
 export default function RootLayout({
