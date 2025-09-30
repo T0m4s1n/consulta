@@ -97,7 +97,7 @@ export default function SlideBibliografia() {
         <div className="absolute w-64 h-64 rounded-full bg-blue-700 opacity-20 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '40%', left: '50%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-6 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
             Referencias consultadas

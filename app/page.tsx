@@ -166,9 +166,9 @@ const ParentComponent = () => {
         </div>
       </div>
 
-      {/* Navegación flotante mejorada */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50">
-        <div className="bg-white/90 backdrop-blur-sm rounded-full shadow-lg p-3 flex flex-col gap-2">
+      {/* Navegación flotante mejorada - responsive */}
+      <div className="fixed right-2 md:right-6 top-1/2 -translate-y-1/2 z-50">
+        <div className="bg-white/90 backdrop-blur-sm rounded-full shadow-lg p-2 md:p-3 flex flex-col gap-1.5 md:gap-2">
           {slides.map((slide) => (
             <button
               key={slide.id}
@@ -178,10 +178,10 @@ const ParentComponent = () => {
             >
               <div className={`rounded-full transition-all duration-300 ${
                 currentSlide === slide.id 
-                  ? 'bg-blue-600 w-3 h-3 scale-125' 
-                  : 'bg-gray-300 w-2 h-2 hover:bg-blue-400 hover:scale-110'
+                  ? 'bg-blue-600 w-2.5 h-2.5 md:w-3 md:h-3 scale-125' 
+                  : 'bg-gray-300 w-1.5 h-1.5 md:w-2 md:h-2 hover:bg-blue-400 hover:scale-110'
               }`} />
-              <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-gray-900 text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                 {slide.title}
               </span>
             </button>
@@ -189,41 +189,41 @@ const ParentComponent = () => {
         </div>
       </div>
 
-      {/* Botones de navegación arriba/abajo */}
-      <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-2">
+      {/* Botones de navegación arriba/abajo - responsive */}
+      <div className="fixed bottom-4 md:bottom-8 right-4 md:right-8 z-50 flex flex-col gap-2">
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0}
-          className={`p-3 rounded-full bg-white shadow-lg transition-all ${
+          className={`p-2 md:p-3 rounded-full bg-white shadow-lg transition-all ${
             currentSlide === 0 
               ? 'opacity-30 cursor-not-allowed' 
               : 'hover:bg-blue-50 hover:shadow-xl'
           }`}
           aria-label="Slide anterior"
         >
-          <ChevronUp size={24} className="text-blue-600" />
+          <ChevronUp size={20} className="md:w-6 md:h-6 text-blue-600" />
         </button>
         <button
           onClick={nextSlide}
           disabled={currentSlide === totalSlides - 1}
-          className={`p-3 rounded-full bg-white shadow-lg transition-all ${
+          className={`p-2 md:p-3 rounded-full bg-white shadow-lg transition-all ${
             currentSlide === totalSlides - 1 
               ? 'opacity-30 cursor-not-allowed' 
               : 'hover:bg-blue-50 hover:shadow-xl'
           }`}
           aria-label="Siguiente slide"
         >
-          <ChevronDown size={24} className="text-blue-600" />
+          <ChevronDown size={20} className="md:w-6 md:h-6 text-blue-600" />
         </button>
       </div>
 
-      {/* Indicador de slide actual */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-white px-6 py-3 rounded-full shadow-lg">
-        <div className="flex items-center gap-3">
-          <span className="text-sm font-medium text-gray-700">
+      {/* Indicador de slide actual - responsive */}
+      <div className="fixed bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-50 bg-white px-3 py-2 md:px-6 md:py-3 rounded-full shadow-lg">
+        <div className="flex items-center gap-2 md:gap-3">
+          <span className="text-xs md:text-sm font-medium text-gray-700">
             {currentSlide + 1} / {totalSlides}
           </span>
-          <span className="text-xs text-gray-500">
+          <span className="hidden sm:inline text-xs text-gray-500 max-w-[120px] md:max-w-none truncate">
             {slides[currentSlide].title}
           </span>
         </div>

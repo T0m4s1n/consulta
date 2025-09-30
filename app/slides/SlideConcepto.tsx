@@ -10,18 +10,18 @@ export default function SlideConcepto() {
         <div className="absolute w-64 h-64 rounded-full bg-blue-700 opacity-20 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '20%', right: '10%' }} />
       </div>
       
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-8">
-        <div className="mb-6 animate-fade-in-up">
-          <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-4 md:py-8">
+        <div className="mb-4 md:mb-6 animate-fade-in-up">
+          <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-blue-400 text-xs md:text-sm font-medium">
             Conceptos básicos
           </div>
         </div>
 
-        <h1 className="text-5xl font-bold mb-8 animate-fade-in-up">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-8 animate-fade-in-up">
           ¿Qué son los Medios Guiados?
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-4 md:mb-8">
           <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-8 border border-blue-900 border-opacity-30 animate-fade-in-up">
             <Cable size={48} className="text-blue-600 mb-4" />
             <h2 className="text-2xl font-bold mb-4">Definición</h2>

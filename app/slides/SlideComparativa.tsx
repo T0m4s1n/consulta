@@ -10,16 +10,16 @@ export default function SlideComparativa() {
         <div className="absolute w-64 h-64 rounded-full bg-blue-500 opacity-20 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '25%', right: '10%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-4 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
             Análisis comparativo
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-6 animate-fade-in-up flex items-center gap-4">
-          <GitCompare size={40} className="text-blue-600" />
-          Guiados vs No Guiados
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <GitCompare size={32} className="sm:w-10 sm:h-10 text-blue-600" />
+          <span>Guiados vs No Guiados</span>
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

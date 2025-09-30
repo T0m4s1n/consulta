@@ -29,17 +29,17 @@ export default function Presentation() {
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
-        <div className="mb-6 animate-fade-in-up">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
+        <div className="mb-4 md:mb-6 animate-fade-in-up">
           <HeroBadge>Presentación técnica</HeroBadge>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-3 md:mb-4">
               Medios de transmisión guiados y cableado estructurado
             </h1>
-            <p className="text-gray-600 text-lg mb-6">
+            <p className="text-gray-600 text-base md:text-lg mb-4 md:mb-6">
               Qué son, cómo evolucionaron, dónde se usan hoy y hacia dónde van. Compararemos guiados vs no guiados con foco en redes domésticas, empresariales e industriales.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -47,33 +47,33 @@ export default function Presentation() {
               <Pill>Empresariales</Pill>
               <Pill>Industriales</Pill>
               <Pill>Estándares TIA/EIA · ISO/IEC</Pill>
-            </div>
+                    </div>
 
-            <div className="mt-8 text-sm text-gray-500">
+            <div className="mt-6 md:mt-8 text-sm text-gray-500">
               <div className="font-semibold mb-1">Autores</div>
               <div className="flex items-center gap-2">
                 <Users size={16} className="text-blue-600" /> River Bonilla · Tomas Benavides
-              </div>
+                </div>
             </div>
           </div>
-
+          
           <div className="bg-white border border-blue-200 rounded-xl overflow-hidden shadow-sm animate-fade-in-up-delayed">
-            <div className="grid grid-cols-2 divide-x divide-blue-100">
-              <div className="p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-blue-100">
+              <div className="p-4 md:p-6">
                 <div className="text-blue-700 font-semibold mb-2">
                   Guiados
                 </div>
-                <ul className="text-sm text-gray-700 space-y-2">
+                <ul className="text-xs md:text-sm text-gray-700 space-y-1 md:space-y-2">
                   <li>UTP/STP, Coaxial, Fibra óptica</li>
                   <li>Categorías Cat5e–Cat8, conectores RJ45, LC/SC</li>
                   <li>Topologías y canal permanente</li>
                 </ul>
-              </div>
-              <div className="p-6">
+                    </div>
+              <div className="p-4 md:p-6">
                 <div className="text-blue-700 font-semibold mb-2">
                   No guiados
                 </div>
-                <ul className="text-sm text-gray-700 space-y-2">
+                <ul className="text-xs md:text-sm text-gray-700 space-y-1 md:space-y-2">
                   <li>Radio, microondas, IR</li>
                   <li>Wi‑Fi, Bluetooth, 5G</li>
                   <li>Rendimiento vs latencia vs EMI</li>

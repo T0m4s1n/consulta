@@ -10,16 +10,16 @@ export default function SlideMicroondas() {
         <div className="absolute w-64 h-64 rounded-full bg-orange-600 opacity-15 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '30%', left: '20%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-6 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-orange-400 bg-orange-50 text-sm font-medium">
             Enlaces punto a punto
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-4 animate-fade-in-up flex items-center gap-4">
-          <Signal size={40} className="text-orange-600" />
-          Microondas Terrestres
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <Signal size={32} className="sm:w-10 sm:h-10 text-orange-600" />
+          <span>Microondas Terrestres</span>
         </h1>
 
         {/* Fechas importantes */}

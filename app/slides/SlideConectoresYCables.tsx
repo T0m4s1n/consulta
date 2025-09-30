@@ -10,16 +10,16 @@ export default function SlideConectoresYCables() {
         <div className="absolute w-64 h-64 rounded-full bg-indigo-600 opacity-15 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '25%', left: '15%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-4 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-indigo-400 bg-indigo-50 text-sm font-medium">
             Conectores y cables adicionales
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-6 animate-fade-in-up flex items-center gap-4">
-          <Plug size={40} className="text-indigo-600" />
-          Conectores y Cables Especializados
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <Plug size={32} className="sm:w-10 sm:h-10 text-indigo-600" />
+          <span>Conectores y Cables Especializados</span>
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">

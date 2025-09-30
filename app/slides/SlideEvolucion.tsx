@@ -10,16 +10,16 @@ export default function SlideEvolucion() {
         <div className="absolute w-64 h-64 rounded-full bg-blue-700 opacity-20 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '30%', left: '10%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-4 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
             Historia y evolución
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-8 animate-fade-in-up flex items-center gap-4">
-          <TrendingUp size={40} className="text-blue-600" />
-          Evolución de los Cables Guiados
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-8 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <TrendingUp size={32} className="sm:w-10 sm:h-10 text-blue-600" />
+          <span>Evolución de los Cables Guiados</span>
         </h1>
 
         <div className="relative">

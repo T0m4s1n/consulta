@@ -10,16 +10,16 @@ export default function SlideFibraOptica() {
         <div className="absolute w-64 h-64 rounded-full bg-green-600 opacity-15 animate-pulse-glow" style={{ filter: 'blur(80px)', bottom: '20%', right: '15%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-6 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-green-400 bg-green-50 text-sm font-medium">
             Alta velocidad y larga distancia
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-4 animate-fade-in-up flex items-center gap-4">
-          <Gauge size={40} className="text-green-600" />
-          Fibra Óptica
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <Gauge size={32} className="sm:w-10 sm:h-10 text-green-600" />
+          <span>Fibra Óptica</span>
         </h1>
 
         {/* Fechas importantes */}

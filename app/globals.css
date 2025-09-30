@@ -175,7 +175,8 @@ body {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -183,7 +184,13 @@ body {
   justify-content: center;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 2rem 0;
+  padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .presentation-slide {
+    padding: 2rem 0;
+  }
 }
 
 /* Animación más rápida */
@@ -206,5 +213,50 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   .presentation-container {
     scroll-behavior: smooth;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Reduce font sizes on mobile */
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Adjust SVG sizes */
+  svg {
+    max-width: 100%;
+    height: auto !important;
+  }
+  
+  /* Reduce padding on cards */
+  .rounded-lg {
+    padding: 1rem !important;
+  }
+  
+  /* Hide or adjust navigation on mobile */
+  .fixed.right-6 {
+    right: 0.5rem !important;
+    scale: 0.8;
+  }
+  
+  .fixed.bottom-8 {
+    bottom: 1rem !important;
+    scale: 0.8;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem !important;
   }
 }

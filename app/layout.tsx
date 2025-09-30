@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   description: "Medios de transmisión guiados y cableado estructurado - Presentación técnica para ingenieros",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -10,16 +10,16 @@ export default function SlideSeñalesRF() {
         <div className="absolute w-64 h-64 rounded-full bg-purple-600 opacity-15 animate-pulse-glow" style={{ filter: 'blur(80px)', bottom: '25%', right: '15%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-4 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-purple-400 bg-purple-50 text-sm font-medium">
             Modulación y codificación
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-6 animate-fade-in-up flex items-center gap-4">
-          <Radio size={40} className="text-purple-600" />
-          Señales RF y Modulación
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <Radio size={32} className="sm:w-10 sm:h-10 text-purple-600" />
+          <span>Señales RF y Modulación</span>
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

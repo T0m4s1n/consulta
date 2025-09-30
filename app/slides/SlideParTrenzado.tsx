@@ -10,16 +10,16 @@ export default function SlideParTrenzado() {
         <div className="absolute w-64 h-64 rounded-full bg-blue-700 opacity-20 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '25%', left: '15%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
-        <div className="mb-6 animate-fade-in-up">
-          <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
+        <div className="mb-3 md:mb-6 animate-fade-in-up">
+          <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-blue-400 text-xs md:text-sm font-medium">
             Detalles técnicos
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-4 animate-fade-in-up flex items-center gap-4">
-          <Cable size={40} className="text-blue-600" />
-          Par Trenzado (UTP/STP)
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <Cable size={32} className="sm:w-10 sm:h-10 text-blue-600" />
+          <span>Par Trenzado (UTP/STP)</span>
         </h1>
 
         {/* Fechas de estandarización */}

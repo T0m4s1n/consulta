@@ -10,16 +10,16 @@ export default function SlideCoaxial() {
         <div className="absolute w-64 h-64 rounded-full bg-gray-600 opacity-15 animate-pulse-glow" style={{ filter: 'blur(80px)', top: '25%', right: '20%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-6 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-gray-400 bg-gray-50 text-sm font-medium">
             Cable blindado clásico
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-4 animate-fade-in-up flex items-center gap-4">
-          <Zap size={40} className="text-gray-600" />
-          Cable Coaxial
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 animate-fade-in-up flex items-center gap-2 md:gap-4">
+          <Zap size={32} className="sm:w-10 sm:h-10 text-gray-600" />
+          <span>Cable Coaxial</span>
         </h1>
 
         {/* Fechas de evolución */}

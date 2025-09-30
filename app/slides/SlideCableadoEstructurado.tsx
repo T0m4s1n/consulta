@@ -10,14 +10,14 @@ export default function SlideCableadoEstructurado() {
         <div className="absolute w-64 h-64 rounded-full bg-blue-700 opacity-20 animate-pulse-glow" style={{ filter: 'blur(80px)', bottom: '20%', left: '10%' }} />
       </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-8">
         <div className="mb-4 animate-fade-in-up">
           <div className="inline-block px-4 py-2 rounded-full border border-blue-400 text-sm font-medium">
             Estándares TIA-568 / ISO/IEC 11801 [39]
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-6 animate-fade-in-up">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-up">
           Cableado Estructurado
         </h1>
 
