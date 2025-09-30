@@ -23,27 +23,27 @@ export default function SlideMicroondas() {
         </h1>
 
         {/* Fechas importantes */}
-        <div className="bg-white rounded-lg p-4 border border-orange-200 shadow-sm mb-4 animate-fade-in-up">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-orange-200 dark:border-gray-700 shadow-sm mb-4 animate-fade-in-up">
           <h3 className="text-xl font-bold mb-4">Historia de las Microondas</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="border-l-4 border-orange-500 pl-4">
               <div className="text-2xl font-bold text-orange-600">1940s</div>
-              <div className="text-sm text-gray-600">Primeros sistemas de radar y comunicación por microondas [1]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">Primeros sistemas de radar y comunicación por microondas [1]</div>
             </div>
             <div className="border-l-4 border-orange-600 pl-4">
               <div className="text-2xl font-bold text-orange-600">1970s-80s</div>
-              <div className="text-sm text-gray-600">Expansión masiva de enlaces punto a punto terrestres [2]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">Expansión masiva de enlaces punto a punto terrestres [2]</div>
             </div>
             <div className="border-l-4 border-orange-700 pl-4">
               <div className="text-2xl font-bold text-orange-600">2000s-Hoy</div>
-              <div className="text-sm text-gray-600">5G mmWave, backhaul celular de alta capacidad [3]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">5G mmWave, backhaul celular de alta capacidad [3]</div>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* SVG Animado de propagación de microondas */}
-          <div className="bg-white rounded-lg p-6 border border-orange-200 shadow-sm animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-orange-200 dark:border-gray-700 shadow-sm animate-fade-in-up">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
               <Antenna className="text-orange-500" size={24} />
               Propagación Línea de Vista
@@ -114,61 +114,61 @@ export default function SlideMicroondas() {
               <ellipse cx="300" cy="220" rx="200" ry="60" fill="none" stroke="#3b82f6" strokeWidth="1" strokeDasharray="3,3" opacity="0.5"/>
               <text x="300" y="165" textAnchor="middle" className="text-xs" fill="#3b82f6">Zona de Fresnel</text>
             </svg>
-            <div className="text-xs text-gray-600 mt-2">
+            <div className="text-xs text-gray-600 dark:text-gray-300 mt-2">
               Requiere línea de vista directa. La zona de Fresnel debe estar despejada en 60% mínimo
             </div>
           </div>
 
           {/* Bandas y especificaciones */}
           <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 border border-orange-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-orange-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <h3 className="text-xl font-bold mb-4">Bandas de Frecuencia</h3>
               <div className="space-y-3">
                 <div className="border-l-4 border-orange-400 pl-4 py-2 bg-orange-50">
                   <div className="font-semibold">Banda L (1-2 GHz)</div>
-                  <div className="text-sm text-gray-600">GPS, telefonía móvil, enlaces rurales</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">GPS, telefonía móvil, enlaces rurales</div>
                 </div>
                 <div className="border-l-4 border-orange-500 pl-4 py-2 bg-orange-50">
                   <div className="font-semibold">Banda S (2-4 GHz)</div>
-                  <div className="text-sm text-gray-600">Wi-Fi, Bluetooth, radar meteorológico</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Wi-Fi, Bluetooth, radar meteorológico</div>
                 </div>
                 <div className="border-l-4 border-orange-600 pl-4 py-2 bg-orange-50">
                   <div className="font-semibold">Banda C (4-8 GHz)</div>
-                  <div className="text-sm text-gray-600">Satélites, backhaul celular, Wi-Fi 5 GHz</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Satélites, backhaul celular, Wi-Fi 5 GHz</div>
                 </div>
                 <div className="border-l-4 border-orange-700 pl-4 py-2 bg-orange-50">
                   <div className="font-semibold">Banda X (8-12 GHz)</div>
-                  <div className="text-sm text-gray-600">Radar militar, satélites de comunicación</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Radar militar, satélites de comunicación</div>
                 </div>
                 <div className="border-l-4 border-orange-800 pl-4 py-2 bg-orange-50">
                   <div className="font-semibold">Banda Ku/Ka (12-40 GHz)</div>
-                  <div className="text-sm text-gray-600">Enlaces punto-punto de alta capacidad, 5G</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Enlaces punto-punto de alta capacidad, 5G</div>
                 </div>
                 <div className="border-l-4 border-orange-900 pl-4 py-2 bg-orange-50">
                   <div className="font-semibold">mmWave (30-300 GHz)</div>
-                  <div className="text-sm text-gray-600">5G NR, enlaces backhaul 100+ Gbps</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">5G NR, enlaces backhaul 100+ Gbps</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-orange-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-orange-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <h3 className="text-xl font-bold mb-4">Rendimiento Típico</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-3xl font-bold text-blue-600">1-10 Gbps</div>
-                  <div className="text-xs text-gray-600">Capacidad</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">1-10 Gbps</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Capacidad</div>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-3xl font-bold text-blue-600">50 km</div>
-                  <div className="text-xs text-gray-600">Alcance típico</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">50 km</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Alcance típico</div>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-3xl font-bold text-blue-600">&lt;5 ms</div>
-                  <div className="text-xs text-gray-600">Latencia</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">&lt;5 ms</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Latencia</div>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-3xl font-bold text-blue-600">99.99%</div>
-                  <div className="text-xs text-gray-600">Disponibilidad</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">99.99%</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Disponibilidad</div>
                 </div>
               </div>
             </div>
@@ -177,7 +177,7 @@ export default function SlideMicroondas() {
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div>
                   <div className="font-semibold text-green-600">✓ Ventajas</div>
-                  <ul className="space-y-1 text-gray-700 text-xs">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200 text-xs">
                     <li>• Alta capacidad</li>
                     <li>• Sin cableado físico</li>
                     <li>• Instalación rápida</li>
@@ -186,7 +186,7 @@ export default function SlideMicroondas() {
                 </div>
                 <div>
                   <div className="font-semibold text-red-600">✗ Limitaciones</div>
-                  <ul className="space-y-1 text-gray-700 text-xs">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200 text-xs">
                     <li>• Requiere línea vista</li>
                     <li>• Afectado por clima</li>
                     <li>• Latencia vs fibra</li>
@@ -199,7 +199,7 @@ export default function SlideMicroondas() {
         </div>
 
         {/* Ejemplo visual de equipo */}
-        <div className="bg-white rounded-lg p-6 border border-orange-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-orange-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h3 className="text-xl font-bold mb-6">Equipo Típico de Microondas</h3>
           <svg viewBox="0 0 400 300" className="w-full h-64">
             {/* Torre con antena parabólica */}
@@ -245,35 +245,35 @@ export default function SlideMicroondas() {
             <text x="280" y="200" className="text-xs" fill="#64748b">ODU: modem RF</text>
             <text x="50" y="265" className="text-xs" fill="#64748b">IDU: procesamiento</text>
           </svg>
-          <div className="text-xs text-gray-600 mt-3">
+          <div className="text-xs text-gray-600 dark:text-gray-300 mt-3">
             <strong>Componentes típicos:</strong> Antena parabólica (0.6-1.2m), ODU (outdoor unit con transceptor), 
             cable coaxial, IDU (indoor unit con modem/router). Instalación en techos o torres [4].
           </div>
         </div>
 
         {/* Casos de uso real */}
-        <div className="bg-white rounded-lg p-6 border border-orange-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-orange-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <h3 className="text-xl font-bold mb-4">Casos de Uso Comunes</h3>
           <div className="space-y-3">
             <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-400">
               <div className="font-semibold">Backhaul Celular</div>
-              <div className="text-sm text-gray-600">Conecta torres de celulares a la red troncal. 1-10 Gbps por enlace [5]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">Conecta torres de celulares a la red troncal. 1-10 Gbps por enlace [5]</div>
             </div>
             <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-500">
               <div className="font-semibold">Empresas sin fibra</div>
-              <div className="text-sm text-gray-600">Edificios corporativos donde no hay FTTH. Alternativa económica [6]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">Edificios corporativos donde no hay FTTH. Alternativa económica [6]</div>
             </div>
             <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-600">
               <div className="font-semibold">Zonas rurales</div>
-              <div className="text-sm text-gray-600">Conectividad en áreas remotas sin infraestructura de cable [7]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">Conectividad en áreas remotas sin infraestructura de cable [7]</div>
             </div>
             <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-700">
               <div className="font-semibold">Enlaces campus</div>
-              <div className="text-sm text-gray-600">Conectar edificios separados sin cableado subterráneo [8]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">Conectar edificios separados sin cableado subterráneo [8]</div>
             </div>
             <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-800">
               <div className="font-semibold">Redundancia</div>
-              <div className="text-sm text-gray-600">Backup para enlaces de fibra críticos en redes empresariales [9]</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">Backup para enlaces de fibra críticos en redes empresariales [9]</div>
             </div>
           </div>
         </div>

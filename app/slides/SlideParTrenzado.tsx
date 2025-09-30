@@ -18,35 +18,35 @@ export default function SlideParTrenzado() {
         </div>
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 animate-fade-in-up flex items-center gap-2 md:gap-4">
-          <Cable size={32} className="sm:w-10 sm:h-10 text-blue-600" />
+          <Cable size={32} className="sm:w-10 sm:h-10 text-blue-600 dark:text-blue-400" />
           <span>Par Trenzado (UTP/STP)</span>
         </h1>
 
         {/* Fechas de estandarización */}
-        <div className="bg-white rounded-lg p-3 border border-blue-200 shadow-sm mb-4 animate-fade-in-up">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-blue-200 dark:border-gray-700 shadow-sm mb-4 animate-fade-in-up">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
             <div className="border-l-4 border-blue-400 pl-3 text-left">
-              <div className="text-xl font-bold text-blue-600">1988</div>
-              <div className="text-xs text-gray-600">Estándar TIA-568 inicial [5]</div>
+              <div className="text-xl font-bold text-blue-600 dark:text-blue-400">1988</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Estándar TIA-568 inicial [5]</div>
             </div>
             <div className="border-l-4 border-blue-500 pl-3 text-left">
-              <div className="text-xl font-bold text-blue-600">2001</div>
-              <div className="text-xs text-gray-600">Cat5e y Cat6 estandarizadas [6]</div>
+              <div className="text-xl font-bold text-blue-600 dark:text-blue-400">2001</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Cat5e y Cat6 estandarizadas [6]</div>
             </div>
             <div className="border-l-4 border-blue-600 pl-3 text-left">
-              <div className="text-xl font-bold text-blue-600">2008</div>
-              <div className="text-xs text-gray-600">Cat6A y 10GBASE-T [7]</div>
+              <div className="text-xl font-bold text-blue-600 dark:text-blue-400">2008</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Cat6A y 10GBASE-T [7]</div>
             </div>
             <div className="border-l-4 border-blue-700 pl-3 text-left">
-              <div className="text-xl font-bold text-blue-600">2016</div>
-              <div className="text-xs text-gray-600">Cat8 para datacenter [8]</div>
+              <div className="text-xl font-bold text-blue-600 dark:text-blue-400">2016</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Cat8 para datacenter [8]</div>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* SVG Animado de estructura del cable */}
-          <div className="bg-white rounded-lg p-4 border border-blue-200 shadow-sm animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-blue-200 dark:border-gray-700 shadow-sm animate-fade-in-up">
             <h3 className="text-lg font-bold mb-4">Estructura y Función de los 4 Pares (8 Hilos)</h3>
             <svg viewBox="0 0 600 550" className="w-full h-auto">
               {/* Título superior */}
@@ -155,7 +155,7 @@ export default function SlideParTrenzado() {
                 <text x="0" y="180" className="text-xs italic" fill="#6b7280">* En 1000BASE-T y PoE se usan los 4 pares</text>
               </g>
             </svg>
-            <div className="text-xs text-gray-600 mt-2">
+            <div className="text-xs text-gray-600 dark:text-gray-300 mt-2">
               4 pares trenzados (8 hilos) reducen crosstalk y EMI mediante cancelación magnética. 
               Inventado en 1881 por Alexander Graham Bell [11][12]. Variantes UTP y STP según necesidad de blindaje [13].
             </div>
@@ -163,41 +163,41 @@ export default function SlideParTrenzado() {
 
           {/* Especificaciones */}
           <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-blue-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <Zap className="text-blue-600" size={24} />
+                <Zap className="text-blue-600 dark:text-blue-400" size={24} />
                 Categorías y Rendimiento
               </h3>
               <div className="space-y-3">
                 <div className="border-l-4 border-blue-400 pl-4">
                   <div className="font-semibold">Cat5e (Enhanced)</div>
-                  <div className="text-sm text-gray-600">1 Gbps • 100 MHz • Más de 20 años en uso [14]</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">1 Gbps • 100 MHz • Más de 20 años en uso [14]</div>
                 </div>
                 <div className="border-l-4 border-blue-500 pl-4">
                   <div className="font-semibold">Cat6</div>
-                  <div className="text-sm text-gray-600">1 Gbps (55m: 10 Gbps) • 250 MHz • Estándar actual [15]</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">1 Gbps (55m: 10 Gbps) • 250 MHz • Estándar actual [15]</div>
                 </div>
                 <div className="border-l-4 border-blue-600 pl-4">
                   <div className="font-semibold">Cat6A (Augmented)</div>
-                  <div className="text-sm text-gray-600">10 Gbps • 500 MHz • 100m full duplex [14][15]</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">10 Gbps • 500 MHz • 100m full duplex [14][15]</div>
                 </div>
                 <div className="border-l-4 border-blue-700 pl-4">
                   <div className="font-semibold">Cat7/7A</div>
-                  <div className="text-sm text-gray-600">10 Gbps • 600-1000 MHz • S/FTP blindado</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">10 Gbps • 600-1000 MHz • S/FTP blindado</div>
                 </div>
                 <div className="border-l-4 border-blue-800 pl-4">
                   <div className="font-semibold">Cat8</div>
-                  <div className="text-sm text-gray-600">40 Gbps • 2000 MHz • 30m datacenter [16][64]</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">40 Gbps • 2000 MHz • 30m datacenter [16][64]</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-6 border border-blue-200 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <div className="bg-blue-50 rounded-lg p-6 border border-blue-200 dark:border-gray-700 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <h4 className="font-bold mb-3">Ventajas / Desventajas</h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <div className="font-semibold text-green-600 mb-1">✓ Ventajas</div>
-                  <ul className="space-y-1 text-gray-700">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200">
                     <li>• Bajo costo</li>
                     <li>• Fácil instalación</li>
                     <li>• Flexible</li>
@@ -206,7 +206,7 @@ export default function SlideParTrenzado() {
                 </div>
                 <div>
                   <div className="font-semibold text-red-600 mb-1">✗ Desventajas</div>
-                  <ul className="space-y-1 text-gray-700">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200">
                     <li>• 100m máximo</li>
                     <li>• Sensible EMI (UTP)</li>
                     <li>• Atenuación por distancia</li>

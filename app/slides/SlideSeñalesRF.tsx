@@ -24,7 +24,7 @@ export default function SlideSeñalesRF() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* SVG Animado de modulación */}
-          <div className="bg-white rounded-lg p-8 border border-purple-200 shadow-sm animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-purple-200 dark:border-gray-700 shadow-sm animate-fade-in-up">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
               <Waves className="text-purple-500" size={24} />
               Tipos de Modulación
@@ -67,61 +67,61 @@ export default function SlideSeñalesRF() {
               <text x="200" y="430" className="text-xs" fill="#6b7280">2-4 bits/Hz</text>
               <text x="400" y="430" className="text-xs" fill="#6b7280">6-10 bits/Hz</text>
             </svg>
-            <div className="text-xs text-gray-600 mt-2">
+            <div className="text-xs text-gray-600 dark:text-gray-300 mt-2">
               Modulaciones más avanzadas (QAM) permiten mayor eficiencia espectral
             </div>
           </div>
 
           {/* Técnicas y aplicaciones */}
           <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-purple-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <h3 className="text-xl font-bold mb-4">Técnicas de Modulación Digital</h3>
               <div className="space-y-3">
                 <div className="border-l-4 border-green-500 pl-4 py-2 bg-green-50">
                   <div className="font-semibold">BPSK / QPSK</div>
-                  <div className="text-sm text-gray-600">Phase Shift Keying • GPS, satélites, enlaces confiables</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Phase Shift Keying • GPS, satélites, enlaces confiables</div>
                 </div>
                 <div className="border-l-4 border-blue-500 pl-4 py-2 bg-blue-50">
                   <div className="font-semibold">16-QAM / 64-QAM</div>
-                  <div className="text-sm text-gray-600">Wi-Fi 4/5 • LTE • Balance velocidad/robustez</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Wi-Fi 4/5 • LTE • Balance velocidad/robustez</div>
                 </div>
                 <div className="border-l-4 border-purple-500 pl-4 py-2 bg-purple-50">
                   <div className="font-semibold">256-QAM / 1024-QAM</div>
-                  <div className="text-sm text-gray-600">Wi-Fi 6 • LTE-A • Alta velocidad en buenas condiciones</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Wi-Fi 6 • LTE-A • Alta velocidad en buenas condiciones</div>
                 </div>
                 <div className="border-l-4 border-pink-500 pl-4 py-2 bg-pink-50">
                   <div className="font-semibold">4096-QAM</div>
-                  <div className="text-sm text-gray-600">Wi-Fi 7 • Máxima eficiencia espectral</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Wi-Fi 7 • Máxima eficiencia espectral</div>
                 </div>
                 <div className="border-l-4 border-orange-500 pl-4 py-2 bg-orange-50">
                   <div className="font-semibold">OFDM / OFDMA</div>
-                  <div className="text-sm text-gray-600">Múltiples subportadoras • Wi-Fi 6/7, 5G, LTE</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Múltiples subportadoras • Wi-Fi 6/7, 5G, LTE</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-purple-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <h3 className="text-xl font-bold mb-4">Espectro y Eficiencia</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center bg-purple-50 p-3 rounded">
                   <span className="font-semibold">BPSK</span>
-                  <span className="text-sm text-gray-600">1 bit/símbolo</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">1 bit/símbolo</span>
                 </div>
                 <div className="flex justify-between items-center bg-purple-50 p-3 rounded">
                   <span className="font-semibold">QPSK</span>
-                  <span className="text-sm text-gray-600">2 bits/símbolo</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">2 bits/símbolo</span>
                 </div>
                 <div className="flex justify-between items-center bg-purple-50 p-3 rounded">
                   <span className="font-semibold">16-QAM</span>
-                  <span className="text-sm text-gray-600">4 bits/símbolo</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">4 bits/símbolo</span>
                 </div>
                 <div className="flex justify-between items-center bg-purple-50 p-3 rounded">
                   <span className="font-semibold">64-QAM</span>
-                  <span className="text-sm text-gray-600">6 bits/símbolo</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">6 bits/símbolo</span>
                 </div>
                 <div className="flex justify-between items-center bg-purple-50 p-3 rounded">
                   <span className="font-semibold">256-QAM</span>
-                  <span className="text-sm text-gray-600">8 bits/símbolo</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">8 bits/símbolo</span>
                 </div>
                 <div className="flex justify-between items-center bg-purple-100 p-3 rounded border-2 border-purple-400">
                   <span className="font-semibold">4096-QAM</span>
@@ -132,7 +132,7 @@ export default function SlideSeñalesRF() {
 
             <div className="bg-purple-50 rounded-lg p-4 border border-purple-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               <h4 className="font-bold mb-2 text-sm">Relación SNR y Modulación</h4>
-              <p className="text-xs text-gray-700">
+              <p className="text-xs text-gray-700 dark:text-gray-200">
                 A mayor SNR (señal/ruido), se puede usar modulación más compleja. QAM alto requiere excelente calidad de señal. 
                 Sistemas adaptativos (AMC) cambian modulación según condiciones del canal.
               </p>

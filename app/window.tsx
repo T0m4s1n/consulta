@@ -5,7 +5,7 @@ import { TrendingUp, Wrench, PlugZap, Network, Clock, CheckCircle2 } from 'lucid
 
 const Row = ({ label, value }: { label: string; value: string }) => (
   <div className="flex items-center justify-between py-2 border-b last:border-0">
-    <div className="text-sm text-gray-600">{label}</div>
+    <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     <div className="text-sm font-semibold text-blue-800">{value}</div>
   </div>
 );
@@ -25,7 +25,7 @@ export default function OutlookAndConclusions() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg border p-6 animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg border p-6 animate-fade-in-up">
             <div className="flex items-center gap-2 font-semibold mb-2"><TrendingUp className="text-blue-600" size={18} /> Tendencias 2026–2030</div>
             <Row label="Fibra campus/core" value="400G→800G (ZR/ZR+)" />
             <Row label="Ethernet cobre" value="2.5G/5G PoE++ en acceso" />
@@ -34,7 +34,7 @@ export default function OutlookAndConclusions() {
             <Row label="5G Privado" value="URLLC para control tiempo‑real" />
     </div>
     
-          <div className="bg-white rounded-lg border p-6 animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg border p-6 animate-fade-in-up">
             <div className="flex items-center gap-2 font-semibold mb-2"><PlugZap className="text-blue-600" size={18} /> USB‑C y HDMI en el ecosistema</div>
             <ul className="text-sm text-gray-700 space-y-2">
               <li>USB‑C se estandariza como conector universal (USB4/Thunderbolt, hasta 100 W, 40 Gbps) [62][70][71].</li>
@@ -43,7 +43,7 @@ export default function OutlookAndConclusions() {
             </ul>
     </div>
     
-          <div className="bg-white rounded-lg border p-6 animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg border p-6 animate-fade-in-up">
             <div className="flex items-center gap-2 font-semibold mb-2"><Network className="text-blue-600" size={18} /> IPv6, protocolos y estándares</div>
             <ul className="text-sm text-gray-700 space-y-2">
               <li>IPv6 nativo (SLAAC, SRv6) en campus/DC e IoT masivo, superando el 30% de penetración [61].</li>
@@ -72,7 +72,7 @@ export default function OutlookAndConclusions() {
           </div>
               </div>
               
-        <div className="mt-8 bg-white rounded-lg border p-6 animate-fade-in-up">
+        <div className="mt-8 bg-white dark:bg-gray-800 rounded-lg border p-6 animate-fade-in-up">
           <div className="flex items-center gap-2 font-semibold mb-2"><CheckCircle2 className="text-blue-600" size={18} /> Conclusiones clave</div>
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-2 text-sm">
             <li><span className="font-semibold">Fibra domina</span> en capacidad, distancia e inmunidad.</li>

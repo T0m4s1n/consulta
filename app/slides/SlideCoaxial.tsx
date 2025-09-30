@@ -18,35 +18,35 @@ export default function SlideCoaxial() {
         </div>
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 animate-fade-in-up flex items-center gap-2 md:gap-4">
-          <Zap size={32} className="sm:w-10 sm:h-10 text-gray-600" />
+          <Zap size={32} className="sm:w-10 sm:h-10 text-gray-600 dark:text-gray-300" />
           <span>Cable Coaxial</span>
         </h1>
 
         {/* Fechas de evolución */}
-        <div className="bg-white rounded-lg p-3 border border-gray-200 shadow-sm mb-4 animate-fade-in-up">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700 shadow-sm mb-4 animate-fade-in-up">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="border-l-4 border-gray-400 pl-3">
-              <div className="text-xl font-bold text-gray-600">1880</div>
-              <div className="text-xs text-gray-600">Patente original (Oliver Heaviside) [21]</div>
+              <div className="text-xl font-bold text-gray-600 dark:text-gray-300">1880</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Patente original (Oliver Heaviside) [21]</div>
             </div>
             <div className="border-l-4 border-gray-500 pl-3">
-              <div className="text-xl font-bold text-gray-600">1941</div>
-              <div className="text-xs text-gray-600">Primera aplicación comercial AT&T [22]</div>
+              <div className="text-xl font-bold text-gray-600 dark:text-gray-300">1941</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Primera aplicación comercial AT&T [22]</div>
             </div>
             <div className="border-l-4 border-gray-600 pl-3">
-              <div className="text-xl font-bold text-gray-600">2006</div>
-              <div className="text-xs text-gray-600">DOCSIS 3.0 estandarizado [23]</div>
+              <div className="text-xl font-bold text-gray-600 dark:text-gray-300">2006</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">DOCSIS 3.0 estandarizado [23]</div>
             </div>
             <div className="border-l-4 border-gray-700 pl-3">
-              <div className="text-xl font-bold text-gray-600">2020</div>
-              <div className="text-xs text-gray-600">DOCSIS 4.0 full duplex [24]</div>
+              <div className="text-xl font-bold text-gray-600 dark:text-gray-300">2020</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">DOCSIS 4.0 full duplex [24]</div>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* SVG Animado de estructura coaxial */}
-          <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-gray-200 dark:border-gray-700 shadow-sm animate-fade-in-up">
             <h3 className="text-xl font-bold mb-6">Estructura por Capas</h3>
             <svg viewBox="0 0 600 400" className="w-full h-80">
               <defs>
@@ -102,7 +102,7 @@ export default function SlideCoaxial() {
                 <text x="65" y="55" className="text-xs" fill="#3b82f6">Ø 6-10 mm</text>
               </g>
             </svg>
-            <div className="text-xs text-gray-600 mt-2">
+            <div className="text-xs text-gray-600 dark:text-gray-300 mt-2">
               El blindaje de malla proporciona inmunidad a EMI y retorno de corriente. Esta construcción concéntrica 
               le otorga buena inmunidad al ruido y capacidad de transportar señales de alta frecuencia [21][22].
             </div>
@@ -110,54 +110,54 @@ export default function SlideCoaxial() {
 
           {/* Tipos y aplicaciones */}
           <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <h3 className="text-xl font-bold mb-4">Tipos Estándar</h3>
               <div className="space-y-3">
                 <div className="border-l-4 border-gray-400 pl-4 py-2 bg-gray-50">
                   <div className="font-semibold">RG-6 (75Ω)</div>
-                  <div className="text-sm text-gray-600">TV por cable, DOCSIS, señal satelital</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">TV por cable, DOCSIS, señal satelital</div>
                 </div>
                 <div className="border-l-4 border-gray-500 pl-4 py-2 bg-gray-50">
                   <div className="font-semibold">RG-59 (75Ω)</div>
-                  <div className="text-sm text-gray-600">CCTV, video analógico, aplicaciones cortas</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">CCTV, video analógico, aplicaciones cortas</div>
                 </div>
                 <div className="border-l-4 border-gray-600 pl-4 py-2 bg-gray-50">
                   <div className="font-semibold">RG-58 (50Ω)</div>
-                  <div className="text-sm text-gray-600">Ethernet 10BASE2 (legado), radio CB</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Ethernet 10BASE2 (legado), radio CB</div>
                 </div>
                 <div className="border-l-4 border-gray-700 pl-4 py-2 bg-gray-50">
                   <div className="font-semibold">RG-11 (75Ω)</div>
-                  <div className="text-sm text-gray-600">Largas distancias HFC, baja atenuación</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Largas distancias HFC, baja atenuación</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <h3 className="text-xl font-bold mb-4">DOCSIS (Data Over Cable)</h3>
               <div className="space-y-3">
                 <div className="bg-blue-50 p-3 rounded border border-blue-200">
                   <div className="font-semibold">DOCSIS 3.0</div>
-                  <div className="text-sm text-gray-600">1 Gbps down / 200 Mbps up • Canal bonding</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">1 Gbps down / 200 Mbps up • Canal bonding</div>
                 </div>
                 <div className="bg-blue-50 p-3 rounded border border-blue-200">
                   <div className="font-semibold">DOCSIS 3.1</div>
-                  <div className="text-sm text-gray-600">10 Gbps down / 1 Gbps up • OFDM modulation</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">10 Gbps down / 1 Gbps up • OFDM modulation</div>
                 </div>
                 <div className="bg-blue-50 p-3 rounded border border-blue-300">
                   <div className="font-semibold">DOCSIS 4.0 (Full Duplex)</div>
-                  <div className="text-sm text-gray-600">10 Gbps simétrico • Latencia ultra-baja (&lt;1ms) [24]</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">10 Gbps simétrico • Latencia ultra-baja (&lt;1ms) [24]</div>
                 </div>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-lg p-4 border border-gray-200 text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <div className="text-3xl font-bold text-gray-600">10 Gb/s</div>
-                <div className="text-xs text-gray-500">Capacidad DOCSIS 3.1</div>
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+                <div className="text-3xl font-bold text-gray-600 dark:text-gray-300">10 Gb/s</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Capacidad DOCSIS 3.1</div>
               </div>
-              <div className="bg-white rounded-lg p-4 border border-gray-200 text-center animate-fade-in-up" style={{animationDelay: '0.35s'}}>
-                <div className="text-3xl font-bold text-gray-600">500 m</div>
-                <div className="text-xs text-gray-500">Alcance típico RG-6</div>
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 text-center animate-fade-in-up" style={{animationDelay: '0.35s'}}>
+                <div className="text-3xl font-bold text-gray-600 dark:text-gray-300">500 m</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Alcance típico RG-6</div>
               </div>
             </div>
 
@@ -165,7 +165,7 @@ export default function SlideCoaxial() {
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div>
                   <div className="font-semibold text-green-600">✓ Ventajas</div>
-                  <ul className="space-y-1 text-gray-700 text-xs">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200 text-xs">
                     <li>• Blindaje EMI excelente</li>
                     <li>• Infraestructura existente</li>
                     <li>• Buena relación S/N</li>
@@ -174,7 +174,7 @@ export default function SlideCoaxial() {
                 </div>
                 <div>
                   <div className="font-semibold text-red-600">✗ Desventajas</div>
-                  <ul className="space-y-1 text-gray-700 text-xs">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200 text-xs">
                     <li>• Rígido y pesado</li>
                     <li>• Difícil instalación</li>
                     <li>• No ideal para switching</li>

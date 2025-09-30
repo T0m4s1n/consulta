@@ -24,7 +24,7 @@ export default function SlideCablesEspeciales() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Cable Heliax */}
-          <div className="bg-white rounded-lg p-8 border border-yellow-200 shadow-sm animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-yellow-200 dark:border-gray-700 shadow-sm animate-fade-in-up">
             <h3 className="text-2xl font-bold mb-6 text-yellow-800">Cable Heliax (Coaxial Elíptico)</h3>
             
             <svg viewBox="0 0 500 350" className="w-full h-80 mb-4">
@@ -78,7 +78,7 @@ export default function SlideCablesEspeciales() {
             <div className="space-y-3 text-sm">
               <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-500">
                 <div className="font-semibold">Características</div>
-                <ul className="text-xs text-gray-700 mt-1 space-y-1">
+                <ul className="text-xs text-gray-700 dark:text-gray-200 mt-1 space-y-1">
                   <li>• Conductor exterior corrugado para flexibilidad</li>
                   <li>• Dieléctrico de aire minimiza pérdidas</li>
                   <li>• Diámetros típicos: 1/2&quot;, 7/8&quot;, 1-5/8&quot;</li>
@@ -88,7 +88,7 @@ export default function SlideCablesEspeciales() {
               
               <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-600">
                 <div className="font-semibold">Aplicaciones</div>
-                <ul className="text-xs text-gray-700 mt-1 space-y-1">
+                <ul className="text-xs text-gray-700 dark:text-gray-200 mt-1 space-y-1">
                   <li>• Antenas de radio y TV broadcasting</li>
                   <li>• Torres celulares (conexión antena-equipo)</li>
                   <li>• Enlaces de microondas terrestres</li>
@@ -99,18 +99,18 @@ export default function SlideCablesEspeciales() {
               <div className="grid grid-cols-2 gap-2">
                 <div className="bg-white p-2 rounded border text-center">
                   <div className="text-lg font-bold text-yellow-700">-0.5 dB/100m</div>
-                  <div className="text-xs text-gray-600">Atenuación @ 1 GHz</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Atenuación @ 1 GHz</div>
                 </div>
                 <div className="bg-white p-2 rounded border text-center">
                   <div className="text-lg font-bold text-yellow-700">50 Ω</div>
-                  <div className="text-xs text-gray-600">Impedancia</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Impedancia</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Guía de Ondas */}
-          <div className="bg-white rounded-lg p-8 border border-yellow-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-yellow-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h3 className="text-2xl font-bold mb-6 text-yellow-800 flex items-center gap-2">
               <Waves size={28} />
               Guía de Ondas (Waveguide)
@@ -189,7 +189,7 @@ export default function SlideCablesEspeciales() {
             <div className="space-y-3 text-sm">
               <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-500">
                 <div className="font-semibold">Características</div>
-                <ul className="text-xs text-gray-700 mt-1 space-y-1">
+                <ul className="text-xs text-gray-700 dark:text-gray-200 mt-1 space-y-1">
                   <li>• Tubo metálico hueco (rectangular o circular)</li>
                   <li>• Sin conductor central, ondas guiadas por paredes</li>
                   <li>• Frecuencias: 1 GHz - 300 GHz (mmWave)</li>
@@ -199,7 +199,7 @@ export default function SlideCablesEspeciales() {
               
               <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-600">
                 <div className="font-semibold">Modos Comunes</div>
-                <ul className="text-xs text-gray-700 mt-1 space-y-1">
+                <ul className="text-xs text-gray-700 dark:text-gray-200 mt-1 space-y-1">
                   <li>• <strong>TE10</strong>: Modo fundamental (más usado)</li>
                   <li>• <strong>TE20, TE01</strong>: Modos superiores</li>
                   <li>• Frecuencia de corte depende de dimensiones</li>
@@ -208,7 +208,7 @@ export default function SlideCablesEspeciales() {
               
               <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-700">
                 <div className="font-semibold">Aplicaciones</div>
-                <ul className="text-xs text-gray-700 mt-1 space-y-1">
+                <ul className="text-xs text-gray-700 dark:text-gray-200 mt-1 space-y-1">
                   <li>• Radar aeronáutico y naval</li>
                   <li>• Enlaces de microondas de alta potencia</li>
                   <li>• Sistemas satelitales Ka-band</li>
@@ -219,11 +219,11 @@ export default function SlideCablesEspeciales() {
               <div className="grid grid-cols-2 gap-2">
                 <div className="bg-white p-2 rounded border text-center">
                   <div className="text-lg font-bold text-yellow-700">WR-90</div>
-                  <div className="text-xs text-gray-600">X-band (8-12 GHz)</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">X-band (8-12 GHz)</div>
                 </div>
                 <div className="bg-white p-2 rounded border text-center">
                   <div className="text-lg font-bold text-yellow-700">&lt;0.05 dB/m</div>
-                  <div className="text-xs text-gray-600">Pérdida típica</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Pérdida típica</div>
                 </div>
               </div>
             </div>
@@ -231,12 +231,12 @@ export default function SlideCablesEspeciales() {
         </div>
 
         {/* Comparativa rápida */}
-        <div className="mt-8 bg-white rounded-lg p-6 border border-yellow-200 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <div className="mt-8 bg-white dark:bg-gray-800 rounded-lg p-6 border border-yellow-200 dark:border-gray-700 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h3 className="text-xl font-bold mb-4">¿Cuándo usar cada uno?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <div className="bg-yellow-50 p-4 rounded">
               <div className="font-bold mb-2">Cable Heliax/Coaxial</div>
-              <ul className="text-xs space-y-1 text-gray-700">
+              <ul className="text-xs space-y-1 text-gray-700 dark:text-gray-200">
                 <li>✓ Frecuencias hasta ~10 GHz</li>
                 <li>✓ Instalación flexible (se dobla)</li>
                 <li>✓ Torres celulares, broadcasting</li>
@@ -245,7 +245,7 @@ export default function SlideCablesEspeciales() {
             </div>
             <div className="bg-yellow-50 p-4 rounded">
               <div className="font-bold mb-2">Guía de Ondas</div>
-              <ul className="text-xs space-y-1 text-gray-700">
+              <ul className="text-xs space-y-1 text-gray-700 dark:text-gray-200">
                 <li>✓ Frecuencias &gt;10 GHz (mmWave)</li>
                 <li>✓ Pérdidas ultrabajas en alta frecuencia</li>
                 <li>✓ Radar, satélites, investigación</li>

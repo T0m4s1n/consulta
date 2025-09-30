@@ -105,11 +105,11 @@ export default function SlideBibliografia() {
         </div>
 
         <h1 className="text-5xl font-bold mb-8 animate-fade-in-up flex items-center gap-4">
-          <BookOpen size={48} className="text-blue-600" />
+          <BookOpen size={48} className="text-blue-600 dark:text-blue-400" />
           Bibliografía
         </h1>
 
-        <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 mb-8 animate-fade-in-up">
+        <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 dark:border-gray-700 mb-8 animate-fade-in-up">
           <p className="text-sm text-gray-700">
             <strong>Total de referencias:</strong> 73 citas distribuidas en 14 fuentes principales. 
             Todas las fuentes han sido verificadas y consultadas durante la elaboración de esta presentación técnica.
@@ -120,7 +120,7 @@ export default function SlideBibliografia() {
           {referencias.map((ref, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg p-5 border border-blue-200 shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
+              className="bg-white dark:bg-gray-800 rounded-lg p-5 border border-blue-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-start gap-4">
@@ -129,7 +129,7 @@ export default function SlideBibliografia() {
                     [{ref.numeros[0]}]
                   </div>
                   {ref.numeros.length > 1 && (
-                    <div className="text-xs text-gray-500 mt-1 text-center">
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">
                       +{ref.numeros.length - 1}
                     </div>
                   )}
@@ -141,7 +141,7 @@ export default function SlideBibliografia() {
                   </h3>
                   
                   {ref.descripcion && (
-                    <p className="text-xs text-gray-600 mb-2 italic">
+                    <p className="text-xs text-gray-600 dark:text-gray-300 mb-2 italic">
                       {ref.descripcion}
                     </p>
                   )}
@@ -150,7 +150,7 @@ export default function SlideBibliografia() {
                     href={ref.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1 break-all mb-2"
+                    className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:text-blue-300 hover:underline flex items-center gap-1 break-all mb-2"
                   >
                     <ExternalLink size={12} className="flex-shrink-0" />
                     <span className="truncate">{ref.url}</span>
@@ -160,13 +160,13 @@ export default function SlideBibliografia() {
                     {ref.numeros.slice(0, 8).map((num) => (
                       <span 
                         key={num}
-                        className="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded font-mono"
+                        className="inline-block bg-gray-100 text-gray-600 dark:text-gray-300 text-xs px-2 py-0.5 rounded font-mono"
                       >
                         [{num}]
                       </span>
                     ))}
                     {ref.numeros.length > 8 && (
-                      <span className="inline-block bg-gray-200 text-gray-600 text-xs px-2 py-0.5 rounded">
+                      <span className="inline-block bg-gray-200 text-gray-600 dark:text-gray-300 text-xs px-2 py-0.5 rounded">
                         +{ref.numeros.length - 8} más
                       </span>
                     )}
@@ -178,9 +178,9 @@ export default function SlideBibliografia() {
         </div>
 
         {/* Nota metodológica */}
-        <div className="mt-8 bg-white rounded-lg p-6 border border-blue-200 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-8 bg-white dark:bg-gray-800 rounded-lg p-6 border border-blue-200 dark:border-gray-700 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <h3 className="font-bold mb-3 flex items-center gap-2">
-            <BookOpen size={18} className="text-blue-600" />
+            <BookOpen size={18} className="text-blue-600 dark:text-blue-400" />
             Nota Metodológica
           </h3>
           <p className="text-sm text-gray-700 leading-relaxed">
@@ -203,10 +203,10 @@ export default function SlideBibliografia() {
               <strong>River Bonilla</strong> y <strong>Tomas Benavides</strong>
             </p>
           </div>
-          <p className="text-sm text-gray-600 mt-4">
+          <p className="text-sm text-gray-600 dark:text-gray-300 mt-4">
             Medios de Transmisión Guiados y Cableado Estructurado
           </p>
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
             Presentación Técnica para Ingenieros • 2025
           </p>
         </div>

@@ -18,94 +18,94 @@ export default function SlideComparativa() {
         </div>
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-up flex items-center gap-2 md:gap-4">
-          <GitCompare size={32} className="sm:w-10 sm:h-10 text-blue-600" />
+          <GitCompare size={32} className="sm:w-10 sm:h-10 text-blue-600 dark:text-blue-400" />
           <span>Guiados vs No Guiados</span>
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* Guiados */}
-          <div className="bg-white rounded-lg p-8 border-2 border-blue-300 shadow-lg animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border-2 border-blue-300 dark:border-gray-600 shadow-lg animate-fade-in-up">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                <Cable size={32} className="text-blue-600" />
+                <Cable size={32} className="text-blue-600 dark:text-blue-400" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold">Medios Guiados</h2>
-                <p className="text-sm text-gray-600">Cable físico</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Cable físico</p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="border-l-4 border-green-500 pl-4">
                 <div className="font-semibold text-sm">Latencia</div>
-                <div className="text-xs text-gray-600">Muy baja y predecible (&lt;1ms LAN)</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Muy baja y predecible (&lt;1ms LAN)</div>
               </div>
               <div className="border-l-4 border-green-500 pl-4">
                 <div className="font-semibold text-sm">Seguridad</div>
-                <div className="text-xs text-gray-600">Contención física, no emite RF</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Contención física, no emite RF</div>
               </div>
               <div className="border-l-4 border-green-500 pl-4">
                 <div className="font-semibold text-sm">EMI/Interferencias</div>
-                <div className="text-xs text-gray-600">Inmune (fibra) o blindado (STP)</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Inmune (fibra) o blindado (STP)</div>
               </div>
               <div className="border-l-4 border-green-500 pl-4">
                 <div className="font-semibold text-sm">Capacidad</div>
-                <div className="text-xs text-gray-600">Hasta 800G+ fibra, 40G cobre</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Hasta 800G+ fibra, 40G cobre</div>
               </div>
               <div className="border-l-4 border-red-500 pl-4">
                 <div className="font-semibold text-sm">Movilidad</div>
-                <div className="text-xs text-gray-600">Limitada, requiere cableado</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Limitada, requiere cableado</div>
               </div>
               <div className="border-l-4 border-yellow-500 pl-4">
                 <div className="font-semibold text-sm">Coste</div>
-                <div className="text-xs text-gray-600">Medio-alto instalación, bajo mantenimiento</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Medio-alto instalación, bajo mantenimiento</div>
               </div>
             </div>
           </div>
 
           {/* No Guiados */}
-          <div className="bg-white rounded-lg p-8 border-2 border-blue-300 shadow-lg animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border-2 border-blue-300 dark:border-gray-600 shadow-lg animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                <Radio size={32} className="text-blue-600" />
+                <Radio size={32} className="text-blue-600 dark:text-blue-400" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold">Medios No Guiados</h2>
-                <p className="text-sm text-gray-600">Ondas electromagnéticas</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Ondas electromagnéticas</p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="border-l-4 border-red-500 pl-4">
                 <div className="font-semibold text-sm">Latencia</div>
-                <div className="text-xs text-gray-600">Variable (10-500ms satélite)</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Variable (10-500ms satélite)</div>
               </div>
               <div className="border-l-4 border-yellow-500 pl-4">
                 <div className="font-semibold text-sm">Seguridad</div>
-                <div className="text-xs text-gray-600">Expuesto, requiere cifrado robusto</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Expuesto, requiere cifrado robusto</div>
               </div>
               <div className="border-l-4 border-red-500 pl-4">
                 <div className="font-semibold text-sm">EMI/Interferencias</div>
-                <div className="text-xs text-gray-600">Sensible a obstáculos y ruido RF</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Sensible a obstáculos y ruido RF</div>
               </div>
               <div className="border-l-4 border-yellow-500 pl-4">
                 <div className="font-semibold text-sm">Capacidad</div>
-                <div className="text-xs text-gray-600">Hasta 9.6 Gbps (Wi-Fi 7), compartido</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Hasta 9.6 Gbps (Wi-Fi 7), compartido</div>
               </div>
               <div className="border-l-4 border-green-500 pl-4">
                 <div className="font-semibold text-sm">Movilidad</div>
-                <div className="text-xs text-gray-600">Total, sin limitaciones físicas</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Total, sin limitaciones físicas</div>
               </div>
               <div className="border-l-4 border-green-500 pl-4">
                 <div className="font-semibold text-sm">Coste</div>
-                <div className="text-xs text-gray-600">Bajo despliegue inicial, infraestructura simple</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">Bajo despliegue inicial, infraestructura simple</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Matriz de escenarios */}
-        <div className="bg-white rounded-lg p-6 border border-blue-200 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-blue-200 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h3 className="text-xl font-bold mb-4">Aplicación por escenario</h3>
           <div className="grid grid-cols-4 gap-2 text-sm">
             <div className="font-semibold">Escenario</div>

@@ -24,7 +24,7 @@ export default function SlideConectoresYCables() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {/* Cable RG-8 */}
-          <div className="bg-white rounded-lg p-6 border border-indigo-200 shadow-sm animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-indigo-200 dark:border-gray-700 shadow-sm animate-fade-in-up">
             <h3 className="text-xl font-bold mb-4 text-indigo-800">Cable RG-8 (Coaxial Grueso)</h3>
             
             <svg viewBox="0 0 500 280" className="w-full h-64 mb-4">
@@ -76,7 +76,7 @@ export default function SlideConectoresYCables() {
           </div>
 
           {/* Conector RJ45 detallado */}
-          <div className="bg-white rounded-lg p-6 border border-indigo-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-indigo-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h3 className="text-xl font-bold mb-4 text-indigo-800 flex items-center gap-2">
               <Cable size={24} />
               Conector RJ45 (8P8C)
@@ -133,7 +133,7 @@ export default function SlideConectoresYCables() {
           </div>
 
           {/* Conector RJ11 */}
-          <div className="bg-white rounded-lg p-6 border border-indigo-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-indigo-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             <h3 className="text-xl font-bold mb-4 text-indigo-800">Conector RJ11 (6P4C/6P2C)</h3>
             
             <svg viewBox="0 0 500 300" className="w-full h-72 mb-4">
@@ -214,7 +214,7 @@ export default function SlideConectoresYCables() {
           </div>
 
           {/* Cable Trenzado STP vs UTP */}
-          <div className="bg-white rounded-lg p-6 border border-indigo-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-indigo-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.3s'}}>
             <h3 className="text-xl font-bold mb-4 text-indigo-800">Cable Trenzado: UTP vs STP</h3>
             
             <svg viewBox="0 0 500 300" className="w-full h-72 mb-4">
@@ -304,7 +304,7 @@ export default function SlideConectoresYCables() {
         </div>
 
         {/* Resumen comparativo */}
-        <div className="mt-6 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border border-indigo-200 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <div className="mt-6 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6 border border-indigo-200 dark:border-gray-700 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
             <Cable className="text-indigo-600" size={24} />
             Resumen de Conectores y Cables
@@ -312,19 +312,19 @@ export default function SlideConectoresYCables() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="font-bold mb-2 text-indigo-700">RG-8</div>
-              <div className="text-xs text-gray-600">Coaxial grueso 50Ω para radio y alta potencia</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Coaxial grueso 50Ω para radio y alta potencia</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="font-bold mb-2 text-indigo-700">RJ45</div>
-              <div className="text-xs text-gray-600">8P8C estándar para Ethernet y PoE</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">8P8C estándar para Ethernet y PoE</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="font-bold mb-2 text-indigo-700">RJ11</div>
-              <div className="text-xs text-gray-600">6P2C/4C para telefonía analógica</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">6P2C/4C para telefonía analógica</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="font-bold mb-2 text-indigo-700">UTP/STP</div>
-              <div className="text-xs text-gray-600">Par trenzado con o sin blindaje EMI</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Par trenzado con o sin blindaje EMI</div>
             </div>
           </div>
         </div>

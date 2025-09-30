@@ -23,30 +23,30 @@ export default function SlideFibraOptica() {
         </h1>
 
         {/* Fechas importantes */}
-        <div className="bg-white rounded-lg p-3 border border-green-200 shadow-sm mb-4 animate-fade-in-up">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-green-200 dark:border-gray-700 shadow-sm mb-4 animate-fade-in-up">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="border-l-4 border-green-400 pl-3">
               <div className="text-xl font-bold text-green-600">1970</div>
-              <div className="text-xs text-gray-600">Primera fibra óptica práctica (Corning) [26]</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Primera fibra óptica práctica (Corning) [26]</div>
             </div>
             <div className="border-l-4 border-green-500 pl-3">
               <div className="text-xl font-bold text-green-600">1988</div>
-              <div className="text-xs text-gray-600">Primer cable transatlántico [27]</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Primer cable transatlántico [27]</div>
             </div>
             <div className="border-l-4 border-green-600 pl-3">
               <div className="text-xl font-bold text-green-600">2010s</div>
-              <div className="text-xs text-gray-600">OM4/OM5 y 100G Ethernet [28]</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">OM4/OM5 y 100G Ethernet [28]</div>
             </div>
             <div className="border-l-4 border-green-700 pl-3">
               <div className="text-xl font-bold text-green-600">2020+</div>
-              <div className="text-xs text-gray-600">400G/800G coherente ZR+ [29]</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">400G/800G coherente ZR+ [29]</div>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* SVG Animado de propagación de luz */}
-          <div className="bg-white rounded-lg p-8 border border-green-200 shadow-sm animate-fade-in-up">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border border-green-200 dark:border-gray-700 shadow-sm animate-fade-in-up">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
               <Lightbulb className="text-yellow-500" size={24} />
               Propagación de Luz por Reflexión Total
@@ -112,7 +112,7 @@ export default function SlideFibraOptica() {
               <path d="M330 185 L325 175" stroke="#10b981" strokeWidth="1.5" strokeDasharray="3,2"/>
               <path d="M330 185 L325 195" stroke="#10b981" strokeWidth="1.5" strokeDasharray="3,2"/>
             </svg>
-            <div className="text-xs text-gray-600 mt-2">
+            <div className="text-xs text-gray-600 dark:text-gray-300 mt-2">
               La luz se refleja totalmente en la interfaz núcleo-revestimiento por reflexión interna total [26][27], 
               propagándose sin pérdida significativa. Permite transmisión de datos a gran velocidad con baja atenuación [28].
             </div>
@@ -120,46 +120,46 @@ export default function SlideFibraOptica() {
 
           {/* Tipos y especificaciones */}
           <div className="space-y-6">
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-green-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <h3 className="text-xl font-bold mb-4">Multimodo (MMF)</h3>
               <div className="space-y-3">
                 <div className="bg-orange-50 border-l-4 border-orange-400 pl-4 py-2">
                   <div className="font-semibold">OM1 (62.5/125 μm)</div>
-                  <div className="text-sm text-gray-600">1 Gbps • 300m • LED 850nm</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">1 Gbps • 300m • LED 850nm</div>
                 </div>
                 <div className="bg-orange-50 border-l-4 border-orange-500 pl-4 py-2">
                   <div className="font-semibold">OM2 (50/125 μm)</div>
-                  <div className="text-sm text-gray-600">1 Gbps • 550m • LED 850nm</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">1 Gbps • 550m • LED 850nm</div>
                 </div>
                 <div className="bg-orange-50 border-l-4 border-orange-600 pl-4 py-2">
                   <div className="font-semibold">OM3 (50/125 μm optimizada)</div>
-                  <div className="text-sm text-gray-600">10 Gbps • 300m • VCSEL 850nm</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">10 Gbps • 300m • VCSEL 850nm</div>
                 </div>
                 <div className="bg-orange-50 border-l-4 border-orange-700 pl-4 py-2">
                   <div className="font-semibold">OM4 (50/125 μm láser)</div>
-                  <div className="text-sm text-gray-600">10 Gbps • 550m / 100 Gbps • 150m</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">10 Gbps • 550m / 100 Gbps • 150m</div>
                 </div>
                 <div className="bg-orange-50 border-l-4 border-orange-800 pl-4 py-2">
                   <div className="font-semibold">OM5 (50/125 μm WDM)</div>
-                  <div className="text-sm text-gray-600">40/100 Gbps • 150m+ • SWDM</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">40/100 Gbps • 150m+ • SWDM</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-green-200 dark:border-gray-700 shadow-sm animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <h3 className="text-xl font-bold mb-4">Monomodo (SMF)</h3>
               <div className="space-y-3">
                 <div className="bg-blue-50 border-l-4 border-blue-600 pl-4 py-2">
                   <div className="font-semibold">OS1 (9/125 μm indoor)</div>
-                  <div className="text-sm text-gray-600">10+ km • Láser 1310/1550nm</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">10+ km • Láser 1310/1550nm</div>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-700 pl-4 py-2">
                   <div className="font-semibold">OS2 (9/125 μm outdoor)</div>
-                  <div className="text-sm text-gray-600">100G+ • 40-80+ km • DWDM capable</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">100G+ • 40-80+ km • DWDM capable</div>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-800 pl-4 py-2">
                   <div className="font-semibold">ZR/ZR+ Coherente</div>
-                  <div className="text-sm text-gray-600">400G/800G • 80-120 km sin amplificación</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">400G/800G • 80-120 km sin amplificación</div>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function SlideFibraOptica() {
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div>
                   <div className="font-semibold text-green-700">✓✓ Ventajas</div>
-                  <ul className="space-y-1 text-gray-700 text-xs">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200 text-xs">
                     <li>• Inmune total EMI [33][34]</li>
                     <li>• Máxima capacidad (Tbps) [29]</li>
                     <li>• Largas distancias sin amplificación</li>
@@ -177,7 +177,7 @@ export default function SlideFibraOptica() {
                 </div>
                 <div>
                   <div className="font-semibold text-red-600">✗ Desventajas</div>
-                  <ul className="space-y-1 text-gray-700 text-xs">
+                  <ul className="space-y-1 text-gray-700 dark:text-gray-200 text-xs">
                     <li>• Costo alto</li>
                     <li>• Instalación delicada</li>
                     <li>• Requiere limpieza</li>

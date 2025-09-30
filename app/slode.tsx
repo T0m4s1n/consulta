@@ -4,9 +4,9 @@ import React from 'react';
 import { Radio, Satellite, GitCompare, Zap, Signal, CheckCircle2 } from 'lucide-react';
 
 const Card = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <div className="bg-background bg-opacity-20 backdrop-blur-sm rounded-lg p-6 border border-blue-900 border-opacity-30">
+  <div className="bg-white dark:bg-gray-800 backdrop-blur-sm rounded-lg p-6 border border-blue-200 dark:border-gray-700">
     <h3 className="text-2xl font-bold mb-3">{title}</h3>
-    <div className="text-gray-600 leading-relaxed">{children}</div>
+    <div className="text-gray-600 dark:text-gray-300 leading-relaxed">{children}</div>
   </div>
 );
 
@@ -28,7 +28,7 @@ export default function UnguidedMediaAndComparisons() {
           <h1 className="text-4xl font-bold mb-4">
             Medios de Transmisión No Guiados
           </h1>
-          <p className="text-xl text-gray-600">Ondas electromagnéticas en el espacio</p>
+          <p className="text-xl text-gray-600 dark:text-gray-300">Ondas electromagnéticas en el espacio</p>
         </div>
 
         {/* Sección: Introducción */}
@@ -36,19 +36,19 @@ export default function UnguidedMediaAndComparisons() {
           <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
             <Radio size={32} className="mb-4 text-blue-600" />
             <div className="text-xl font-bold mb-2">Flexibilidad</div>
-            <p className="text-gray-600">Movilidad total sin cables físicos</p>
+            <p className="text-gray-600 dark:text-gray-300">Movilidad total sin cables físicos</p>
           </div>
 
           <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
             <Satellite size={32} className="mb-4 text-blue-600" />
             <div className="text-xl font-bold mb-2">Alcance</div>
-            <p className="text-gray-600">Sin límites de cableado</p>
+            <p className="text-gray-600 dark:text-gray-300">Sin límites de cableado</p>
           </div>
 
           <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
             <Signal size={32} className="mb-4 text-blue-600" />
             <div className="text-xl font-bold mb-2">Escalabilidad</div>
-            <p className="text-gray-600">Fácil expansión de red</p>
+            <p className="text-gray-600 dark:text-gray-300">Fácil expansión de red</p>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export default function UnguidedMediaAndComparisons() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold">Ondas de Radio</div>
-                  <div className="text-sm text-gray-600">3 kHz - 300 GHz</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">3 kHz - 300 GHz</div>
                 </div>
               </div>
               
@@ -107,7 +107,7 @@ export default function UnguidedMediaAndComparisons() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold">Microondas</div>
-                  <div className="text-sm text-gray-600">1 GHz - 300 GHz</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">1 GHz - 300 GHz</div>
                 </div>
               </div>
               
@@ -156,7 +156,7 @@ export default function UnguidedMediaAndComparisons() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold">Satélite</div>
-                  <div className="text-sm text-gray-600">Cobertura global</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Cobertura global</div>
                 </div>
               </div>
 
@@ -178,19 +178,19 @@ export default function UnguidedMediaAndComparisons() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="text-2xl font-bold text-blue-800">50 Mbps</div>
-                  <div className="text-xs text-gray-600">Velocidad</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Velocidad</div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="text-2xl font-bold text-blue-800">Global</div>
-                  <div className="text-xs text-gray-600">Cobertura</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Cobertura</div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="text-2xl font-bold text-blue-800">500ms</div>
-                  <div className="text-xs text-gray-600">Latencia</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Latencia</div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="text-2xl font-bold text-blue-800">Alto</div>
-                  <div className="text-xs text-gray-600">Costo</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Costo</div>
                 </div>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function UnguidedMediaAndComparisons() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold">Infrarrojo</div>
-                  <div className="text-sm text-gray-600">Corto alcance</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Corto alcance</div>
                 </div>
               </div>
               
@@ -254,7 +254,7 @@ export default function UnguidedMediaAndComparisons() {
         <div className="mb-8">
           <div className="text-center mb-6">
             <h2 className="text-3xl font-bold mb-2">Comparación de Medios Inalámbricos</h2>
-            <p className="text-gray-600">¿Cuál es mejor para tu proyecto?</p>
+            <p className="text-gray-600 dark:text-gray-300">¿Cuál es mejor para tu proyecto?</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -337,7 +337,7 @@ export default function UnguidedMediaAndComparisons() {
 
           <div className="mt-6 bg-blue-50 rounded-lg p-6 border border-blue-200 text-center">
             <div className="text-xl font-bold mb-2">Conclusión</div>
-            <p className="text-gray-700">La tecnología inalámbrica ofrece movilidad y flexibilidad, ideal cuando el cableado no es viable</p>
+            <p className="text-gray-700 dark:text-gray-200">La tecnología inalámbrica ofrece movilidad y flexibilidad, ideal cuando el cableado no es viable</p>
           </div>
         </div>
 
