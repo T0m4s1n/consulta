@@ -7,7 +7,7 @@
 }
 
 :root {
-  /* Background and foreground - Light Mode */
+  /* Background and foreground - Light Mode Only */
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(0, 0%, 9%);
   --card-bg: hsl(0, 0%, 100%);
@@ -28,23 +28,6 @@
   
   /* Font family */
   --font-family: 'Poppins', var(--font-geist-sans), sans-serif;
-}
-
-/* Dark Mode */
-.dark {
-  --background: hsl(0, 0%, 13.3%);    /* #222222 */
-  --foreground: hsl(0, 0%, 93%);      /* #EDEDED */
-  --card-bg: hsl(0, 0%, 18%);         /* #2D2D2D */
-  --border-color: hsl(0, 0%, 30%);    /* #4D4D4D */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --background: hsl(0, 0%, 13.3%);  /* #222222 */
-    --foreground: hsl(0, 0%, 93%);    /* #EDEDED */
-    --card-bg: hsl(0, 0%, 18%);       /* #2D2D2D */
-    --border-color: hsl(0, 0%, 30%);  /* #4D4D4D */
-  }
 }
 
 /* Add these styles to your global.css file */

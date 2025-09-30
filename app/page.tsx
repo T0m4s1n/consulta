@@ -3,10 +3,10 @@
 import dynamic from 'next/dynamic';
 
 const PresentationWrapper = dynamic(
-  () => import('./components/PresentationWrapper'),
-  { ssr: false }
+ () => import('./components/PresentationWrapper'),
+ { ssr: false }
 );
 
 export default function Home() {
-  return <PresentationWrapper />;
+ return <PresentationWrapper />;
 }
